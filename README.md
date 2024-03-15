@@ -10,9 +10,9 @@ Vermeide es, hier allzusehr in technische Details zu gehen.
 ### Geplantes Design
 Füge hier einige repräsentative Designs deiner App ein (z.B. aus Figma)
 <p>
-  <img src="https://github.com/syntaxinstitut/iOS_Praxisprojekt_Template/assets/155458331/279f2688-e229-4390-ba37-71a4036086ac" width="200">
-  <img src="https://github.com/syntaxinstitut/iOS_Praxisprojekt_Template/assets/155458331/279f2688-e229-4390-ba37-71a4036086ac" width="200">
-  <img src="https://github.com/syntaxinstitut/iOS_Praxisprojekt_Template/assets/155458331/279f2688-e229-4390-ba37-71a4036086ac" width="200">
+  <img src="./img/app_design_1.png" width="200">
+  <img src="./img/app_design_2.png" width="200">
+  <img src="./img/app_design_3.png" width="200">
 </p>
 
 ### Technischer Aufbau
