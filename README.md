@@ -16,7 +16,7 @@ Füge hier einige repräsentative Designs deiner App ein (z.B. aus Figma)
 </p>
 
 ### Technischer Aufbau
-Hier kannst du technisch ins Detail gehen. Beschriebe in einzlnen Abschnitten, wie du folgende Anforderungen umsetzt
+Hier kannst du technisch ins Detail gehen. Beschriebe in einzelnen Abschnitten, wie du folgende Anforderungen umsetzt
 
 #### Projektaufbau
 Eine kurze Beschreibung deiner Ordnerstruktur und Architektur (MVVM, Repositorys?) um Außenstehenden zu helfen, sich in deinem Projekt zurecht zu finden.
@@ -31,6 +31,15 @@ Welche APIs verwendest du?
 Verwendest du Frameworks, die nicht von dir stammen? Bspw. Swift Packages für Firebase, fertige SwiftUI-Views o.Ä.? Gib diese hier an.
 
 ## Milestones
-Überlege dir für jede Woche mindestens ein Arbeitspaket, das du bis dahin gerne geschafft haben möchtest. Lege für jedes Arbeitspaket ein Issue in deinem Github-Projekt an (siehe das bereits existierende unten)
+Überlege dir für jede Woche mindestens ein größeres Arbeitspaket, das du in dieser Woche gerne schaffen möchtest. Lege für jedes Arbeitspaket ein Issue in deinem Github-Projekt an und verlinke es hier, so wie das bereits existierende. (Gib bei ISSUENUMBER die Nummer des issues in deinem Projekt an, damit die Verlinkung funktioniert)
+
 ### Woche 1
- #1
+ - [ ] [README erstellen](/../../issues/1)
+ - [ ] [Issue Beschreibung](/../../issues/ISSUENUMBER)
+
+### Woche 2
+ - [ ] [Issue Beschreibung](/../../issues/ISSUENUMBER)
+
+## Ausblick
+Beschreibe hier, wo die Reise nach deinem Praxisprojekt hin geht. Was möchtest du in Zukunft noch ergänzen?
+ 
