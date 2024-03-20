@@ -41,5 +41,5 @@ Verwendest du Frameworks, die nicht von dir stammen? Bspw. Swift Packages für F
  - [ ] [Issue Beschreibung](/../../issues/ISSUENUMBER)
 
 ## Ausblick
-Beschreibe hier, wo die Reise nach deinem Praxisprojekt hin geht. Was möchtest du in Zukunft noch ergänzen?
+Beschreibe hier, wo die Reise nach deinem Praxisprojekt hin geht. Was möchtest du in Zukunft noch ergänzen? Erstelle auch hierzu Issues und verlinke sie, wie oben.
  
