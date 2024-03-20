@@ -19,7 +19,7 @@ Füge hier einige repräsentative Designs deiner App ein (z.B. aus Figma)
 Hier kannst du technisch ins Detail gehen. Beschriebe in einzelnen Abschnitten, wie du folgende Anforderungen umsetzt
 
 #### Projektaufbau
-Eine kurze Beschreibung deiner Ordnerstruktur und Architektur (MVVM, Repositorys?) um Außenstehenden zu helfen, sich in deinem Projekt zurecht zu finden.
+Eine kurze Beschreibung deiner Ordnerstruktur und Architektur (MVVM, Repositories?) um Außenstehenden zu helfen, sich in deinem Projekt zurecht zu finden.
 
 #### Datenspeicherung
 Welche Daten speicherst du? Wo und wie (Firebase, Core Data)?
