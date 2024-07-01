@@ -28,12 +28,12 @@ SettingsView
   <img src="./img/DelsihDish - RecipesListView_3.png" width="200">
   <img src="./img/DelishDish - RecpeListDetailsView - Ingredient_4.png" width="200">
   <img src="./img/DelishDish - RecpeListDetailsView - Measure_5.png" width="200">
-  <img src=".img/DelishDish - RecpeListDetailsView - Instructions_6.png" width="200">
-  <img src=".img/DelishDish - RecpeListDetailsView - Instructions mit Favorite_7.png" width="200">
-  <img src=".img/DelsihDish - FavouriteView_8.png" width="200">
-  <img src=".img/DelsihDish - ToDoView_9.png" width="200">
-  <img src=".img/DelsihDish - ToDoView - Sheet_10.png" width="200">
-  <img src=".img/DelsihDish - SettingsView_11.png" width="200">
+  <img src="./img/DelishDish - RecpeListDetailsView - Instructions_6.png" width="200">
+  <img src="./img/DelishDish - RecpeListDetailsView - Instructions mit Favorite_7.png" width="200">
+  <img src="./img/DelsihDish - FavouriteView_8.png" width="200">
+  <img src="./img/DelsihDish - ToDoView_9.png" width="200">
+  <img src="./img/DelsihDish - ToDoView - Sheet_10.png" width="200">
+  <img src="./img/DelsihDish - SettingsView_11.png" width="200">
 </p>
 
 
