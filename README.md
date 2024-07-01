@@ -17,7 +17,7 @@ Wenn deine App dann so weit ist, dass du echte Screenshots machen kannst, sollte
   ## Geplantes Design
   <p>
   <img src="./img/DelsihDish - RecipesListView_3.png" width="200">
-  <img src="./img/DelishDish - RecpeListDetailsView - Ingredient_4.png.png" width="200">
+  <img src="./img/DelishDish - RecpeListDetailsView - Ingredient_4.png" width="200">
   <img src="./img/DelishDish - RecpeListDetailsView - Measure_5.png" width="200">
   <img src="./img/DelsihDish - RecipesListView_3.png" width="200">
   <img src="./img/DelsihDish - RecipesListView_3.png" width="200">
