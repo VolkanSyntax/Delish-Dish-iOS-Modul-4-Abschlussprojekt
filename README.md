@@ -8,12 +8,14 @@ Für wen ist sie geeignet? Welches Problem löst sie? Was macht deine App anders
 Vermeide es, hier allzusehr in technische Details zu gehen.
 
 ## Geplantes Design
-Füge hier einige repräsentative Designs deiner App ein (z.B. aus Figma)
+Füge hier einige repräsentative Designs deiner App ein (z.B. aus Figma).
+Wenn deine App dann so weit ist, dass du echte Screenshots machen kannst, solltest du diese hier einsetzen.
 <p>
   <img src="./img/app_design_1.png" width="200">
   <img src="./img/app_design_2.png" width="200">
   <img src="./img/app_design_3.png" width="200">
 </p>
+
 
 ## Features
 Hier kommen alle geplanten Features der App rein mit dem Status, ob es bereits umgesetzt wurde.
