@@ -31,7 +31,7 @@ Hier kommen alle geplanten Features der App rein mit dem Status, ob es bereits u
 Eine kurze Beschreibung deiner Ordnerstruktur und Architektur (MVVM, Repositories?) um Außenstehenden zu helfen, sich in deinem Projekt zurecht zu finden.
 
 #### Datenspeicherung
-Welche Daten speicherst du? Wo und wie (Firebase, Core Data)?
+Welche Daten speicherst du? Wo und wie (Firebase, Core Data, etwas anderes)?
 
 #### API Calls
 Welche APIs verwendest du?
