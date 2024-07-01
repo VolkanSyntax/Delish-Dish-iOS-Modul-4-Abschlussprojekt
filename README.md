@@ -7,6 +7,8 @@ Darüber hinaus kannst du eine To-Do-Liste hinzufügen, um deine Einkaufslisten 
 Perfekt für alle, die gerne kochen und ihre täglichen Aufgaben im Griff behalten möchten.
 
 ## Geplantes Design
+LoginView
+
 Füge hier einige repräsentative Designs deiner App ein (z.B. aus Figma).
 Wenn deine App dann so weit ist, dass du echte Screenshots machen kannst, solltest du diese hier einsetzen.
 <p>
@@ -14,17 +16,24 @@ Wenn deine App dann so weit ist, dass du echte Screenshots machen kannst, sollte
   <img src="./img/DelishDish - LoginView - Registieren_2.png" width="200">
 </p>
   
-  ## Geplantes Design
+## Geplantes Design
+RecipeListView
+RecipeListDetailsView
+FavouriteView
+ToDoView
+SettingsView
+
+  
   <p>
   <img src="./img/DelsihDish - RecipesListView_3.png" width="200">
   <img src="./img/DelishDish - RecpeListDetailsView - Ingredient_4.png" width="200">
   <img src="./img/DelishDish - RecpeListDetailsView - Measure_5.png" width="200">
-  <img src="./img/DelsihDish - RecipesListView_3.png" width="200">
-  <img src="./img/DelsihDish - RecipesListView_3.png" width="200">
-  <img src="./img/DelsihDish - RecipesListView_3.png" width="200">
-  <img src="./img/DelsihDish - RecipesListView_3.png" width="200">
-  <img src="./img/DelsihDish - RecipesListView_3.png" width="200">
-  <img src="./img/DelsihDish - RecipesListView_3.png" width="200">
+  <img src=".img/DelishDish - RecpeListDetailsView - Instructions_6.png" width="200">
+  <img src=".img/DelishDish - RecpeListDetailsView - Instructions mit Favorite_7.png" width="200">
+  <img src=".img/DelsihDish - FavouriteView_8.png" width="200">
+  <img src=".img/DelsihDish - ToDoView_9.png" width="200">
+  <img src=".img/DelsihDish - ToDoView - Sheet_10.png" width="200">
+  <img src=".img/DelsihDish - SettingsView_11.png" width="200">
 </p>
 
 
