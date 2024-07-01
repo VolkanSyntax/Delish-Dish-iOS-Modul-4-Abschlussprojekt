@@ -1,11 +1,12 @@
-# Name der App
+# DelishDish
 
-**(Optional) Füge hier einen kurzen, knackigen Slogan ein, um deine App zu bewerben.**
+**Leckere Rezepte und mehr in deiner Hand!**
 
 Beschreibe hier in ein paar Sätzen, was deine App bietet.
 
-Für wen ist sie geeignet? Welches Problem löst sie? Was macht deine App anders / besser als andere Apps?
-Vermeide es, hier allzusehr in technische Details zu gehen.
+DelishDish bietet eine Sammlung von köstlichen Rezepten, die dir helfen, beeindruckende Mahlzeiten zuzubereiten. 
+Darüber hinaus kannst du eine To-Do-Liste hinzufügen, um deine Einkaufslisten oder andere Aufgaben zu organisieren. 
+Perfekt für alle, die gerne kochen und ihre täglichen Aufgaben im Griff behalten möchten.
 
 ## Geplantes Design
 Füge hier einige repräsentative Designs deiner App ein (z.B. aus Figma).
