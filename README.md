@@ -11,8 +11,16 @@ Füge hier einige repräsentative Designs deiner App ein (z.B. aus Figma).
 Wenn deine App dann so weit ist, dass du echte Screenshots machen kannst, solltest du diese hier einsetzen.
 <p>
   <img src="./img/DelishDish - LoginView - Anmelden_1.png" width="200">
-  <img src="./img/app_design_2.png" width="200">
-  <img src="./img/app_design_3.png" width="200">
+  <img src="./img/img/DelishDish - LoginView - Registieren_2.png" width="200">
+  <img src="./img/img/DelsihDish - RecipesListView_3.png" width="200">
+  <img src="./img/img/img/DelishDish - RecpeListDetailsView - Ingredient_4.png.png" width="200">
+  <img src="./img/img/img/DelishDish - RecpeListDetailsView - Measure_5.png" width="200">
+  <img src="./img/img/DelsihDish - RecipesListView_3.png" width="200">
+  <img src="./img/img/DelsihDish - RecipesListView_3.png" width="200">
+  <img src="./img/img/DelsihDish - RecipesListView_3.png" width="200">
+  <img src="./img/img/DelsihDish - RecipesListView_3.png" width="200">
+  <img src="./img/img/DelsihDish - RecipesListView_3.png" width="200">
+  <img src="./img/img/DelsihDish - RecipesListView_3.png" width="200">
 </p>
 
 
