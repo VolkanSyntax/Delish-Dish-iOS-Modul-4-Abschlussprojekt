@@ -10,7 +10,7 @@ Perfekt für alle, die gerne kochen und ihre täglichen Aufgaben im Griff behalt
 Füge hier einige repräsentative Designs deiner App ein (z.B. aus Figma).
 Wenn deine App dann so weit ist, dass du echte Screenshots machen kannst, solltest du diese hier einsetzen.
 <p>
-  <img src="./img/app_design_1.png" width="200">
+  <img src="./img/DelishDish - LoginView - Anmelden_1.png" width="200">
   <img src="./img/app_design_2.png" width="200">
   <img src="./img/app_design_3.png" width="200">
 </p>
