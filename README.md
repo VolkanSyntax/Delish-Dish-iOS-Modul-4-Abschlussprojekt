@@ -2,8 +2,6 @@
 
 **Leckere Rezepte und mehr in deiner Hand!**
 
-Beschreibe hier in ein paar Sätzen, was deine App bietet.
-
 DelishDish bietet eine Sammlung von köstlichen Rezepten, die dir helfen, beeindruckende Mahlzeiten zuzubereiten. 
 Darüber hinaus kannst du eine To-Do-Liste hinzufügen, um deine Einkaufslisten oder andere Aufgaben zu organisieren. 
 Perfekt für alle, die gerne kochen und ihre täglichen Aufgaben im Griff behalten möchten.
