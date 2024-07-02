@@ -6,7 +6,8 @@ DelishDish bietet eine Sammlung von köstlichen Rezepten, die dir helfen, beeind
 Darüber hinaus kannst du eine To-Do-Liste hinzufügen, um deine Einkaufslisten oder andere Aufgaben zu organisieren. 
 Perfekt für alle, die gerne kochen und ihre täglichen Aufgaben im Griff behalten möchten.
 
-## Geplantes Design
+## Geplantes Design in Figma
+
 LoginView
 
 Füge hier einige repräsentative Designs deiner App ein (z.B. aus Figma).
@@ -16,12 +17,12 @@ Wenn deine App dann so weit ist, dass du echte Screenshots machen kannst, sollte
   <img src="./img/DelishDish - LoginView - Registieren_2.png" style="height: 500px; object-fit: cover;">
 </div>
   
-## Geplantes Design
-RecipeListView
-RecipeListDetailsView
-FavouriteView
-ToDoView
-SettingsView
+## Geplantes Design in Figma
+RecipeListView -
+RecipeListDetailsView -
+FavouriteView -
+ToDoView -
+SettingsView 
 
   
  <div style="display: flex; flex-wrap: wrap; gap: 10px;">
