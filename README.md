@@ -12,8 +12,8 @@ LoginView
 Füge hier einige repräsentative Designs deiner App ein (z.B. aus Figma).
 Wenn deine App dann so weit ist, dass du echte Screenshots machen kannst, solltest du diese hier einsetzen.
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="./img/DelishDish - LoginView - Anmelden_1.png" style="height: 450px; object-fit: cover;">
-  <img src="./img/DelishDish - LoginView - Registieren_2.png" style="height: 450px; object-fit: cover;">
+  <img src="./img/DelishDish - LoginView - Anmelden_1.png" style="height: 500px; object-fit: cover;">
+  <img src="./img/DelishDish - LoginView - Registieren_2.png" style="height: 500px; object-fit: cover;">
 </div>
   
 ## Geplantes Design
@@ -25,15 +25,15 @@ SettingsView
 
   
  <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="./img/DelsihDish - RecipesListView_3.png" style="height: 200px; object-fit: cover;">
-  <img src="./img/DelishDish - RecpeListDetailsView - Ingredient_4.png" style="height: 200px; object-fit: cover;">
-  <img src="./img/DelishDish - RecpeListDetailsView - Measure_5.png" style="height: 200px; object-fit: cover;">
-  <img src="./img/DelishDish - RecpeListDetailsView - Instructions_6.png" style="height: 200px; object-fit: cover;">
-  <img src="./img/DelishDish - RecpeListDetailsView - Instructions mit Favorite_7.png" style="height: 200px; object-fit: cover;">
-  <img src="./img/DelsihDish - FavouriteView_8.png" style="height: 200px; object-fit: cover;">
-  <img src="./img/DelsihDish - ToDoView_9.png" style="height: 200px; object-fit: cover;">
-  <img src="./img/DelsihDish - ToDoView - Sheet_10.png" style="height: 200px; object-fit: cover;">
-  <img src="./img/DelsihDish - SettingsView_11.png" style="height: 200px; object-fit: cover;">
+  <img src="./img/DelsihDish - RecipesListView_3.png" style="height: 500px; object-fit: cover;">
+  <img src="./img/DelishDish - RecpeListDetailsView - Ingredient_4.png" style="height: 500px; object-fit: cover;">
+  <img src="./img/DelishDish - RecpeListDetailsView - Measure_5.png" style="height: 500px; object-fit: cover;">
+  <img src="./img/DelishDish - RecpeListDetailsView - Instructions_6.png" style="height: 500px; object-fit: cover;">
+  <img src="./img/DelishDish - RecpeListDetailsView - Instructions mit Favorite_7.png" style="height: 500px; object-fit: cover;">
+  <img src="./img/DelsihDish - FavouriteView_8.png" style="height: 500px; object-fit: cover;">
+  <img src="./img/DelsihDish - ToDoView_9.png" style="height: 500px; object-fit: cover;">
+  <img src="./img/DelsihDish - ToDoView - Sheet_10.png" style="height: 500px; object-fit: cover;">
+  <img src="./img/DelsihDish - SettingsView_11.png" style="height: 500px; object-fit: cover;">
 </div>
 
 
