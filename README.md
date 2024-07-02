@@ -12,8 +12,8 @@ LoginView
 Füge hier einige repräsentative Designs deiner App ein (z.B. aus Figma).
 Wenn deine App dann so weit ist, dass du echte Screenshots machen kannst, solltest du diese hier einsetzen.
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="./img/DelishDish - LoginView - Anmelden_1.png" style="height: 250px; object-fit: cover;">
-  <img src="./img/DelishDish - LoginView - Registieren_2.png" style="height: 250px; object-fit: cover;">
+  <img src="./img/DelishDish - LoginView - Anmelden_1.png" style="height: 450px; object-fit: cover;">
+  <img src="./img/DelishDish - LoginView - Registieren_2.png" style="height: 450px; object-fit: cover;">
 </div>
   
 ## Geplantes Design
