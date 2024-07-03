@@ -58,21 +58,23 @@ Hier kommen alle geplanten Features der App rein mit dem Status, ob es bereits u
 #### Projektaufbau
 In meinem Projekt habe ich die MVVM-Architektur verwendet. Die Ordnerstruktur sieht wie folgt 
 
-/DelishDishApp
-  /Models
-  /Views
-  /ViewModels
-  /Services
+ - DelishDishApp
+ - Models
+ - Views
+ - ViewModels
+ - Services
 
 
 #### Datenspeicherung
-**Firebase**: Für die Authentifizierung und Speicherung von Benutzerinformationen.
+- **Firebase**: Für die Authentifizierung und Speicherung von Benutzerinformationen.
 
 #### Api Calls 
-**[TheMealDB](https://www.themealdb.com/api.php)** :  Für das abrufen der Rezepte und mehr.
+- **[TheMealDB](https://www.themealdb.com/api.php)** :  Für das abrufen der Rezepte und mehr.
 
 #### 3rd-Party Frameworks
-Verwendest du Frameworks, die nicht von dir stammen?  Ich werde Firebase verwenden.
+- **Firebase Authentication**: Für Benutzeranmeldung und registrierung.
+- **Firebase Cloud Firestore**: Für die Speicherung und Verwaltung der Rezepte und Benutzerinformationen.
+- **SwiftUI**: Für die Gestaltung der Benutzeroberfläche. 
 
 
 ## Ausblick
