@@ -6,24 +6,24 @@ DelishDish bietet eine Sammlung von köstlichen Rezepten, die dir helfen, beeind
 Darüber hinaus kannst du eine To-Do-Liste hinzufügen, um deine Einkaufslisten oder andere Aufgaben zu organisieren. 
 Perfekt für alle, die gerne kochen und ihre täglichen Aufgaben im Griff behalten möchten.
 
-## Geplantes Design in Figma
 
+  
+Geplantes Design in Figma
 LoginView
-
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
   <img src="./img/DelishDish - LoginView - Anmelden_1.png" style="height: 500px; object-fit: cover;">
-  <img src="./img/DelishDish - LoginView - Registieren_2.png" style="height: 500px; object-fit: cover;">
+  <img src="./img/DelishDish - LoginView - Registrieren_2.png" style="height: 500px; object-fit: cover;">
 </div>
-  
-## Geplantes Design in Figma
-RecipeListView -
-RecipeListDetailsView -
-FavouriteView -
-ToDoView -
-SettingsView 
 
-  
- <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+
+Weitere Ansichten
+RecipeListView
+RecipeListDetailsView
+FavouriteView
+ToDoView
+SettingsView
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
   <img src="./img/DelsihDish - RecipesListView_3.png" style="height: 500px; object-fit: cover;">
   <img src="./img/DelishDish - RecpeListDetailsView - Ingredient_4.png" style="height: 500px; object-fit: cover;">
   <img src="./img/DelishDish - RecpeListDetailsView - Measure_5.png" style="height: 500px; object-fit: cover;">
