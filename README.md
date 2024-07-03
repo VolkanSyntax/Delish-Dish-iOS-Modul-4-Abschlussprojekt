@@ -7,8 +7,10 @@ Darüber hinaus kannst du eine To-Do-Liste hinzufügen, um deine Einkaufslisten 
 Perfekt für alle, die gerne kochen und ihre täglichen Aufgaben im Griff behalten möchten.
 
 
+
+
   
-## Geplantes Design in Figma
+## Figmada designte Beispielansichten der DelishDish App
 
 LoginView
 
@@ -18,7 +20,7 @@ LoginView
 </div>
 
 
-Weitere Ansichten
+### Weitere Ansichten
 RecipeListView
 RecipeListDetailsView
 FavouriteView
