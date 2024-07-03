@@ -52,18 +52,31 @@ Hier kommen alle geplanten Features der App rein mit dem Status, ob es bereits u
 ## Technischer Aufbau
 
 #### Projektaufbau
-Eine kurze Beschreibung deiner Ordnerstruktur und Architektur (MVVM, Repositories?) um Außenstehenden zu helfen, sich in deinem Projekt zurecht zu finden.
+In meinem Projekt habe ich die MVVM-Architektur verwendet. Die Ordnerstruktur sieht wie folgt 
+
+/DelishDishApp
+  /Models
+  /Views
+  /ViewModels
+  /Services
+
 
 #### Datenspeicherung
-Welche Daten speicherst du? Wo und wie (Firebase, Core Data, etwas anderes)?
+Welche Daten speicherst du?   Ich werde meine Daten mit Firebase speichern.
 
 #### API Calls
-Welche APIs verwendest du?
+Welche APIs verwendest du?    Ich werde die folgende API verwenden, um Rezepte abzurufen: TheMealDB : https://www.themealdb.com/api.php
 
 #### 3rd-Party Frameworks
-Verwendest du Frameworks, die nicht von dir stammen? Bspw. Swift Packages für Firebase, fertige SwiftUI-Views o.Ä.? Gib diese hier an.
+Verwendest du Frameworks, die nicht von dir stammen?  Ich werde Firebase verwenden.
 
 
 ## Ausblick
-Beschreibe hier, wo die Reise nach deinem Praxisprojekt hin geht. Was möchtest du in Zukunft noch ergänzen? Erstelle auch hierzu Issues und verlinke sie, wie oben.
- 
+
+In Zukunft werde ich noch einige Ergänzungen vornehmen, um mein Projekt weiterzuentwickeln. Aktuell habe ich folgende Pläne:
+
+Eine Liste, die die nächstgelegenen Märkte mit Namen und Adresse anzeigt, um die Zutaten der Rezepte zu beschaffen.
+Eine Liste, die die Entfernung dieser Märkte von Ihrem Standort anzeigt.
+Eine Funktion, die automatisch Apple Maps startet, um direkt zur ausgewählten Adresse zu navigieren.
+
+
