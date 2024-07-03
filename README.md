@@ -69,7 +69,7 @@ In meinem Projekt habe ich die MVVM-Architektur verwendet. Die Ordnerstruktur si
 **Firebase**: Für die Authentifizierung und Speicherung von Benutzerinformationen.
 
 #### Api Calls 
-Welche APIs verwendest du? Ich werde die folgende API verwenden, um Rezepte abzurufen: [TheMealDB](https://www.themealdb.com/api.php).
+**[TheMealDB](https://www.themealdb.com/api.php)** :  Für das abrufen der Rezepte und mehr.
 
 #### 3rd-Party Frameworks
 Verwendest du Frameworks, die nicht von dir stammen?  Ich werde Firebase verwenden.
