@@ -10,7 +10,7 @@ Perfekt für alle, die gerne kochen und ihre täglichen Aufgaben im Griff behalt
 
 
   
-## Figmada designte Beispielansichten der DelishDish App
+## In Figma designte Beispielansichten der DelishDish App
 
 LoginView
 
