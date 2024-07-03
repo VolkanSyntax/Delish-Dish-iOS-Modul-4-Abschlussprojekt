@@ -69,7 +69,7 @@ In meinem Projekt habe ich die MVVM-Architektur verwendet. Die Ordnerstruktur si
 Welche Daten speicherst du?   Ich werde meine Daten mit Firebase speichern.
 
 #### API Calls
-Welche APIs verwendest du?    Ich werde die folgende API verwenden, um Rezepte abzurufen: TheMealDB : https://www.themealdb.com/api.php
+Welche APIs verwendest du? Ich werde die folgende API verwenden, um Rezepte abzurufen: [TheMealDB](https://www.themealdb.com/api.php).
 
 #### 3rd-Party Frameworks
 Verwendest du Frameworks, die nicht von dir stammen?  Ich werde Firebase verwenden.
