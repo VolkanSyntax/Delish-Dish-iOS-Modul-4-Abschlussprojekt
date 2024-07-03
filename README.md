@@ -66,7 +66,7 @@ In meinem Projekt habe ich die MVVM-Architektur verwendet. Die Ordnerstruktur si
 
 
 #### Datenspeicherung
-Welche Daten speicherst du?   Ich werde meine Daten mit Firebase speichern.
+**Firebase**: Für die Authentifizierung und Speicherung von Benutzerinformationen.
 
 #### Api Calls 
 Welche APIs verwendest du? Ich werde die folgende API verwenden, um Rezepte abzurufen: [TheMealDB](https://www.themealdb.com/api.php).
