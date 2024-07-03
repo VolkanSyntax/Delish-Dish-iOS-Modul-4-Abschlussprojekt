@@ -39,9 +39,14 @@ SettingsView
 ## Features
 Hier kommen alle geplanten Features der App rein mit dem Status, ob es bereits umgesetzt wurde.
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] ...
+- [ ] Benutzer können sich registrieren und anmelden
+    
+- [ ] Rezeptdaten durchsuchen und Rezepte speichern
+
+- [ ] To-Do-Listen erstellen und verwalten
+
+- [ ] Lieblingsrezepte Favoriten speichern
+
 
 
 ## Technischer Aufbau
