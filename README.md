@@ -1,16 +1,16 @@
 # DelishDish
 
-**Leckere Rezepte und mehr in deiner Hand!**
+- **Leckere Rezepte und mehr in deiner Hand!**
 
-DelishDish bietet eine Sammlung von köstlichen Rezepten, die dir helfen, beeindruckende Mahlzeiten zuzubereiten. 
-Darüber hinaus kannst du eine To-Do-Liste hinzufügen, um deine Einkaufslisten oder andere Aufgaben zu organisieren. 
-Perfekt für alle, die gerne kochen und ihre täglichen Aufgaben im Griff behalten möchten.
+## DelishDish bietet eine Sammlung von köstlichen Rezepten, die dir helfen, beeindruckende Mahlzeiten zuzubereiten. 
+## Darüber hinaus kannst du eine To-Do-Liste hinzufügen, um deine Einkaufslisten oder andere Aufgaben zu organisieren. 
+## Perfekt für alle, die gerne kochen und ihre täglichen Aufgaben im Griff behalten möchten.
 
 
 
 
   
-## In Figma designte Beispielansichten der DelishDish App
+# In Figma designte Beispielansichten der DelishDish App
 
 LoginView
 
@@ -21,11 +21,11 @@ LoginView
 
 
 ### Weitere Ansichten
-RecipeListView
-RecipeListDetailsView
-FavouriteView
-ToDoView
-SettingsView
+- RecipeListView
+- RecipeListDetailsView
+- FavouriteView
+- ToDoView
+- SettingsView
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
   <img src="./img/DelsihDish - RecipesListView_3.png" style="height: 500px; object-fit: cover;">
