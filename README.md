@@ -1,4 +1,4 @@
-# DelishDish
+# DelishDish <div style="display: flex; flex-wrap: wrap; gap: 10px;"> <img src="./img/Delish-Dish Logo.png" style="height: 150px; object-fit: cover;"> </div>
 
 - ### **Leckere Rezepte und mehr in deiner Hand!**
 
