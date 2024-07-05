@@ -71,7 +71,8 @@ In meinem Projekt habe ich die MVVM-Architektur verwendet. Die Ordnerstruktur si
 - **Firebase**: Für die Authentifizierung und Speicherung von Benutzerinformationen.
 
 #### Api Calls 
-- **[TheMealDB](https://www.themealdb.com/api.php)** :  Für das abrufen der Rezepte und mehr.
+- **[TheMealDB](https://www.themealdb.com/api.php)** :  Zum Abrufen von Rezepten und zum Anzeigen der Zubereitung auf YouTube.
+- **[OpenAi-Api](https://platform.openai.com/docs/api-reference/introduction)** : Zum Erstellen eines Rezepte-Generators.
 
 #### 3rd-Party Frameworks
 - **Firebase Authentication**: Für Benutzeranmeldung und registrierung.
