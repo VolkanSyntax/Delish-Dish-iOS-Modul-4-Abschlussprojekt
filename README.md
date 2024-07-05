@@ -75,8 +75,7 @@ In meinem Projekt habe ich die MVVM-Architektur verwendet. Die Ordnerstruktur si
 
 #### 3rd-Party Frameworks
 - **Firebase Authentication**: Für Benutzeranmeldung und registrierung.
-- **Firebase Cloud Firestore**: Für die Speicherung und Verwaltung der Rezepte und Benutzerinformationen.
-- **SwiftUI**: Für die Gestaltung der Benutzeroberfläche. 
+- **Firebase Cloud Firestore**: Für die Speicherung und Verwaltung der Rezepte und Benutzerinformationen. 
 
 
 ## Ausblick
