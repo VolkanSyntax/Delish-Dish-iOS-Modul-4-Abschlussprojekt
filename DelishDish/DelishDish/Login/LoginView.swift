@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct LoginView: View {
+    @EnvironmentObject var viewModel : LoginViewModel
     
     // MARK: VARIABLES -
-   
     @State private var email = ""
     @State private var password = ""
     
@@ -29,16 +29,15 @@ struct LoginView: View {
                 .padding()
                 .background(RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 1))
             
-            TextField("Password", text: $password)
+            SecureField("Password", text: $password)
                 .padding()
                 .background(RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 1))
             
             Spacer()
          
             Button("Anmelden!"){
-                
-                
-            }
+                viewModel.login(email: email, password: password)
+                }
             .frame(maxWidth: .infinity)
             .padding()
             .background(.blue)
@@ -52,16 +51,9 @@ struct LoginView: View {
         Spacer()
         
     }
-    // MARK: Functions -
-    
 }
- /*
-    private func registrierenToggle(){
-        registrieren.toggle()
-    }
-}
-  */
+ 
     
 #Preview {
-    LoginView()
+    LoginView().environmentObject(LoginViewModel())
 }

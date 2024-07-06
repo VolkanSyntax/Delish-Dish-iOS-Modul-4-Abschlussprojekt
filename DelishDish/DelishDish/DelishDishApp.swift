@@ -10,8 +10,11 @@ import FirebaseAuth
 import SwiftUI
 
 
+
 @main
 struct DelishDishApp: App {
+    
+    @StateObject private var loginViewModel = LoginViewModel()
     
     init() {
         FirebaseConfiguration.shared.setLoggerLevel(.min)
@@ -19,7 +22,8 @@ struct DelishDishApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            AuthentificationView()
+                .environmentObject(LoginViewModel())
         }
     }
 }
