@@ -21,25 +21,14 @@ struct ContentView: View {
             .frame(width: 393, height: 852)
             .edgesIgnoringSafeArea(.all)
 
-            VStack {
-                Rectangle()
-                    .foregroundColor(.clear)
-                    .frame(width: 256, height: 241)
-                    .background(
-                        Image("Logo")  // Burada kendi resim yolunuzu belirtmelisiniz
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 256, height: 241)
-                            .clipped()
-                    )
                 
             }
             .padding()
         }
         
     }
-}
 
 #Preview {
     ContentView()
+        .environmentObject(LoginViewModel())
 }

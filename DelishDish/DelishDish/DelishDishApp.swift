@@ -22,8 +22,13 @@ struct DelishDishApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            AuthentificationView()
-                .environmentObject(LoginViewModel())
+            if loginViewModel.isUserLoggeIn {
+                SettingsView()
+                    .environmentObject(loginViewModel)
+            } else {
+                AuthentificationView()
+                    .environmentObject(loginViewModel)
+            }
         }
     }
 }

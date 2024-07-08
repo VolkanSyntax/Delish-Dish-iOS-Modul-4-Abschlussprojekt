@@ -22,7 +22,7 @@ struct RegistrierenView: View {
     @State private var passwordCheck = ""
     
     
-
+    
     var body: some View {
         VStack{
             Text("Neu hier? Jetzt registrieren!")
@@ -51,7 +51,7 @@ struct RegistrierenView: View {
             
             Button("Registrieren!"){
                 viewModel.register(password: password, name: name, nachname: nachname, email: email, passwordCheck: passwordCheck)
-                }
+            }
             .frame(maxWidth: .infinity)
             .padding()
             .background(.blue)

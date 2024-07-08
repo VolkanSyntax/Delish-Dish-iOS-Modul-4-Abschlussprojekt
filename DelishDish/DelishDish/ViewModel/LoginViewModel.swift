@@ -12,9 +12,12 @@ import FirebaseFirestore
 
 class LoginViewModel : ObservableObject {
     
-    // MARK:  VARIABLES -
+    // MARK:  VARIABLES -------------------------------------------------------------------------
+    
+    
     @Published private(set) var user: FireUser?
     @Published private(set) var passwordError: String?
+    
     
     var isUserLoggeIn: Bool {
         user.self != nil
@@ -30,7 +33,10 @@ class LoginViewModel : ObservableObject {
         
     }
     
-    // MARK: functions -
+    
+ 
+    // MARK: functions --------------------------------------------------------------------------
+    
     
     private func fetchFirestoreUser(withId id: String) {
         self.firebaseFirestore.collection("users").document(id).getDocument { document, error in
@@ -52,9 +58,6 @@ class LoginViewModel : ObservableObject {
     }
     
     
-    
-    
-    
     func login(email: String, password: String) {
         firebaseAuthentification.signIn(withEmail: email, password: password) { authResult, error in
             if let error {
@@ -69,6 +72,8 @@ class LoginViewModel : ObservableObject {
             self.fetchFirestoreUser(withId: authResult.user.uid)
         }
     }
+    
+    
     func register(password: String, name: String, nachname: String, email: String, passwordCheck: String) {
         guard password == passwordCheck else {
             self.passwordError = "Passwörter stimmen nicht überein!"
@@ -84,18 +89,33 @@ class LoginViewModel : ObservableObject {
                 return
             }
             print("Successfully registered with user-Id \(authResult.user.uid) and email \(userEmail)")
+            
             self.createFirestoreUser(id: authResult.user.uid, name: name, nachname: nachname, email: email)
+            
             self.fetchFirestoreUser(withId: authResult.user.uid)
         }
     }
     
+    
     private func createFirestoreUser(id: String, name: String, nachname: String, email: String) {
         let newFireUser = FireUser(id: id, name: name, nachname: nachname , email: email)
-    //    try? self.firebaseFirestore.collection("users").document(id).setData(from: newFireUser)
         do {
-          try self.firebaseFirestore.collection("users").document(id).setData(from: newFireUser)
+            try self.firebaseFirestore.collection("users").document(id).setData(from: newFireUser)
         } catch {
-          print("Error saving user in firestore: \(error)")
+            print("Error saving user in firestore: \(error)")
         }
-      }
+    }
+    
+    
+    
+    func logout() {
+        do {
+            try firebaseAuthentification.signOut()
+            
+            self.user = nil
+        } catch {
+            print("Error in logout: \(error)")
+        }
+    }
+    
 }
