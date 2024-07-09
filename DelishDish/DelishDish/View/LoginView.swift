@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct LoginView: View {
-    @EnvironmentObject var viewModel : LoginViewModel
+    @EnvironmentObject var viewModel: LoginViewModel
     
     // MARK: VARIABLES -
     @State private var email = ""
     @State private var password = ""
+    @State private var hidePassword: Bool = true
     
-    let backgroundgradientcolor2 = LinearGradient(
+    let backgroundgradientcolor = LinearGradient(
         stops: [
             Gradient.Stop(color: Color(red: 0.32, green: 0.48, blue: 0.56), location: 0.48),
             Gradient.Stop(color: Color(red: 0.17, green: 0.44, blue: 0.57), location: 0.73),
@@ -23,28 +24,73 @@ struct LoginView: View {
         endPoint: UnitPoint(x: 1, y: 1.01)
     )
     
-    
     var body: some View {
         ZStack {
-            backgroundgradientcolor2
+            backgroundgradientcolor
                 .edgesIgnoringSafeArea(.all)
-            VStack{
+            VStack {
                 Text("Melde dich jetzt an!")
                     .font(.title2)
                     .bold()
                     .foregroundStyle(.white)
                 
-                TextField("E-Mail", text: $email)
-                    .padding()
+                HStack {
+                    ZStack(alignment: .leading) {
+                        if email.isEmpty {
+                            Text("E-Mail")
+                                .foregroundColor(.white)
+                                .padding(.leading, 15)
+                        }
+                        HStack {
+                            TextField("", text: $email)
+                                .foregroundColor(.white)
+                                .autocapitalization(.none)
+                                .autocorrectionDisabled(true)
+                                .padding()
+                            Image(systemName: "envelope")
+                                .foregroundColor(.white)
+                                .padding(.trailing, 15)
+                        }
+                    }
                     .background(RoundedRectangle(cornerRadius: 15).stroke(Color.white, lineWidth: 1))
+                }
                 
-                SecureField("Password", text: $password)
-                    .padding()
+                
+                ZStack(alignment: .leading) {
+                    if password.isEmpty {
+                        Text("Password")
+                            .foregroundColor(.white)
+                            .padding(.leading, 15)
+                    }
+                    HStack {
+                        if hidePassword {
+                            SecureField("", text: $password)
+                                .foregroundColor(.white)
+                                .autocapitalization(.none)
+                                .autocorrectionDisabled(true)
+                                .padding()
+                        } else {
+                            TextField("", text: $password)
+                                .foregroundColor(.white)
+                                .autocapitalization(.none)
+                                .autocorrectionDisabled(true)
+                                .padding()
+                        }
+                        
+                        Button(action: {
+                            hidePassword.toggle()
+                        }) {
+                            Image(systemName: hidePassword ? "eye.slash" : "eye")
+                                .foregroundColor(.white)
+                        }
+                        .padding(.trailing, 15)
+                    }
                     .background(RoundedRectangle(cornerRadius: 15).stroke(Color.white, lineWidth: 1))
+                }
                 
                 Spacer()
                 
-                Button("Anmelden!"){
+                Button("Anmelden!") {
                     viewModel.login(email: email, password: password)
                 }
                 .frame(maxWidth: .infinity)
@@ -53,18 +99,16 @@ struct LoginView: View {
                 .background(.white)
                 .clipShape(RoundedRectangle(cornerRadius: 15))
                 .padding()
-                .foregroundStyle(backgroundgradientcolor2)
-                
+                .foregroundStyle(backgroundgradientcolor)
                 
             }
             .padding()
-            Spacer()
-            
         }
     }
 }
- 
-    
+
+
+
 #Preview {
     LoginView().environmentObject(LoginViewModel())
 }

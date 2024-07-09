@@ -7,12 +7,9 @@
 
 import SwiftUI
 
-
-
 struct RegistrierenView: View {
     
-    @EnvironmentObject var viewModel : LoginViewModel
-    
+    @EnvironmentObject var viewModel: LoginViewModel
     
     // MARK: VARIABLES -
     @State private var name = ""
@@ -20,54 +17,157 @@ struct RegistrierenView: View {
     @State private var email = ""
     @State private var password = ""
     @State private var passwordCheck = ""
+    @State private var hidePassword: Bool = true
+    @State private var hidePasswordCheck: Bool = true
     
-    
+    let backgroundgradientcolor = LinearGradient(
+        stops: [
+            Gradient.Stop(color: Color(red: 0.32, green: 0.48, blue: 0.56), location: 0.48),
+            Gradient.Stop(color: Color(red: 0.17, green: 0.44, blue: 0.57), location: 0.73),
+        ],
+        startPoint: UnitPoint(x: 0, y: 0.01),
+        endPoint: UnitPoint(x: 1, y: 1.01)
+    )
     
     var body: some View {
-        VStack{
-            Text("Neu hier? Jetzt registrieren!")
-                .font(.title2)
+        ZStack {
+            backgroundgradientcolor
+                .edgesIgnoringSafeArea(.all)
+            VStack {
+                Text("Neu hier? Jetzt registrieren!")
+                    .font(.title2)
+                    .bold()
+                    .foregroundStyle(.white)
+                
+                HStack {
+                    ZStack(alignment: .leading) {
+                        if name.isEmpty {
+                            Text("Name")
+                                .foregroundColor(.white)
+                                .padding(.leading, 15)
+                        }
+                        TextField("", text: $name)
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(RoundedRectangle(cornerRadius: 15).stroke(Color.white, lineWidth: 1))
+                    }
+                    
+                    ZStack(alignment: .leading) {
+                        if nachname.isEmpty {
+                            Text("Nachname")
+                                .foregroundColor(.white)
+                                .padding(.leading, 15)
+                        }
+                        TextField("", text: $nachname)
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(RoundedRectangle(cornerRadius: 15).stroke(Color.white, lineWidth: 1))
+                    }
+                }
+                
+                HStack {
+                    ZStack(alignment: .leading) {
+                        if email.isEmpty {
+                            Text("E-Mail")
+                                .foregroundColor(.white)
+                                .padding(.leading, 15)
+                        }
+                        HStack {
+                            TextField("", text: $email)
+                                .autocapitalization(.none)
+                                .foregroundColor(.white)
+                                .padding()
+                            Image(systemName: "envelope")
+                                .foregroundColor(.white)
+                                .padding(.trailing, 15)
+                        }
+                    }
+                    .background(RoundedRectangle(cornerRadius: 15).stroke(Color.white, lineWidth: 1))
+                }
+                
+                
+                ZStack(alignment: .leading) {
+                    if password.isEmpty {
+                        Text("Password")
+                            .foregroundColor(.white)
+                            .padding(.leading, 15)
+                    }
+                    HStack {
+                        if hidePassword {
+                            SecureField("", text: $password)
+                                .foregroundColor(.white)
+                                .autocorrectionDisabled(true)
+                                .padding()
+                        } else {
+                            TextField("", text: $password)
+                                .foregroundColor(.white)
+                                .autocapitalization(.none)
+                                .autocorrectionDisabled(true)
+                                .padding()
+                        }
+                        
+                        Button(action: {
+                            hidePassword.toggle()
+                        }) {
+                            Image(systemName: hidePassword ? "eye.slash" : "eye")
+                                .foregroundColor(.white)
+                        }
+                        .padding(.trailing, 15)
+                    }
+                    .background(RoundedRectangle(cornerRadius: 15).stroke(Color.white, lineWidth: 1))
+                }
+                
+                ZStack(alignment: .leading) {
+                    if passwordCheck.isEmpty {
+                        Text("Password bestätigen!")
+                            .foregroundColor(.white)
+                            .padding(.leading, 15)
+                    }
+                    HStack {
+                        if hidePasswordCheck {
+                            SecureField("", text: $passwordCheck)
+                                .foregroundColor(.white)
+                                .autocorrectionDisabled(true)
+                                .padding()
+                        } else {
+                            TextField("", text: $passwordCheck)
+                                .foregroundColor(.white)
+
+                                .autocorrectionDisabled(true)
+                                .padding()
+                        }
+                        
+                        Button(action: {
+                            hidePasswordCheck.toggle()
+                        }) {
+                            Image(systemName: hidePasswordCheck ? "eye.slash" : "eye")
+                                .foregroundColor(.white)
+                        }
+                        .padding(.trailing, 15)
+                    }
+                    .background(RoundedRectangle(cornerRadius: 15).stroke(Color.white, lineWidth: 1))
+                    
+                }
+                
+                Spacer()
+                
+                Button("Registrieren!") {
+                    viewModel.register(password: password, name: name, nachname: nachname, email: email, passwordCheck: passwordCheck)
+                }
+                .frame(maxWidth: .infinity)
                 .bold()
-            
-            HStack{
-                TextField("Name", text: $name)
-                    .padding()
-                    .background(RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 1))
-                TextField("Nachname", text: $nachname)
-                    .padding()
-                    .background(RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 1))
+                .padding()
+                .background(.white)
+                .clipShape(RoundedRectangle(cornerRadius: 15))
+                .padding()
+                .foregroundStyle(backgroundgradientcolor)
+                
             }
-            TextField("E-Mail", text: $email)
-                .padding()
-                .background(RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 1))
-            TextField("Password", text: $password)
-                .padding()
-                .background(RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 1))
-            TextField("Password bestätigen!", text: $passwordCheck)
-                .padding()
-                .background(RoundedRectangle(cornerRadius: 15).stroke(Color.black, lineWidth: 1))
-            
-            Spacer()
-            
-            Button("Registrieren!"){
-                viewModel.register(password: password, name: name, nachname: nachname, email: email, passwordCheck: passwordCheck)
-            }
-            .frame(maxWidth: .infinity)
             .padding()
-            .background(.blue)
-            .clipShape(RoundedRectangle(cornerRadius: 15))
-            .padding()
-            .foregroundStyle(.white)
-            
-            
         }
-        .padding()
-        Spacer()
-        
     }
-    // MARK: Functions -
-    
 }
+
 #Preview {
     RegistrierenView()
 }
