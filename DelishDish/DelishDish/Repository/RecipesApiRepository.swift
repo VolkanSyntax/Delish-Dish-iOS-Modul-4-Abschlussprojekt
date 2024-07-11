@@ -33,14 +33,4 @@ class RecipesApiRepository {
         return mealList.meals
     }
     
-   /* func loadMealDetails(id: String) async throws -> Meal? {
-        guard let url = URL(string: "https://www.themealdb.com/api/json/v1/1/lookup.php?i=\(id)") else {
-            throw ApiError.invalidURL
-        }
-        let (data, _) = try await URLSession.shared.data(from: url)
-        let mealList = try JSONDecoder().decode(MealList.self, from: data)
-        return mealList.meals.first
-    }
-    
-    */
 }
