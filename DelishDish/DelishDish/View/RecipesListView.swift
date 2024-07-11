@@ -25,7 +25,7 @@ struct RecipesListView: View {
                 }) {
                     Text("Recipes Generator")
                         .padding()
-                        .frame(width: 175, height: 50)
+                        .frame(width: 175, height: 45)
                         .background(Color.black)
                         .foregroundColor(.white)
                         .cornerRadius(20)
