@@ -99,6 +99,7 @@ struct AuthentificationView: View {
     
     func anmeldenToggle() {
         anmelden.toggle()
+        
     }
     
     
