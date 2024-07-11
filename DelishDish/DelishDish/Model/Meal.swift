@@ -61,7 +61,7 @@ struct Meal: Codable, Identifiable {
     let strMeasure19: String?
     let strMeasure20: String?
     
-
+    
     var id: String {
         return idMeal
     }
