@@ -13,4 +13,5 @@ struct FireUser: Codable, Identifiable {
     let nachname: String
     let email: String
     
+    
 }
