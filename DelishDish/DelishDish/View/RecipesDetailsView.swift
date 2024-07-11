@@ -111,6 +111,7 @@ struct RecipesDetailsView: View {
     enum Tab {
         case ingredients, measures, instructions
     }
+    
 }
 
 #Preview {
