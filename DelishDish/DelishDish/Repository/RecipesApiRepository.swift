@@ -13,7 +13,7 @@ class RecipesApiRepository {
     }
 
     func loadMeals() async throws -> [Meal] {
-        guard let url = URL(string: "https://www.themealdb.com/api/json/v1/1/search.php?s=") else {
+        guard let url = URL(string: "https://www.themealdb.com/api/json/v2/\(ApiKeys.theMealDb.rawValue)/search.php?s=") else {
             throw ApiError.invalidURL
         }
 
@@ -24,11 +24,12 @@ class RecipesApiRepository {
     }
 
     func searchMeals(keyword: String) async throws -> [Meal] {
-        guard let url = URL(string: "https://www.themealdb.com/api/json/v1/1/search.php?s=\(keyword)") else {
+        guard let url = URL(string: "https://www.themealdb.com/api/json/v2/\(ApiKeys.theMealDb.rawValue)/search.php?s=\(keyword)") else {
             throw ApiError.invalidURL
         }
         let (data, _) = try await URLSession.shared.data(from: url)
         let mealList = try JSONDecoder().decode(MealList.self, from: data)
+        
         return mealList.meals
     }
     
