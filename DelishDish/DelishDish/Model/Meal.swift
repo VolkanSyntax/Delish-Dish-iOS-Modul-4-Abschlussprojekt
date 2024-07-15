@@ -67,7 +67,7 @@ struct Meal: Codable, Identifiable {
     
     var id: String {
         
-        @DocumentID var firebaseId: String?
+    
         return idMeal
     }
 }
