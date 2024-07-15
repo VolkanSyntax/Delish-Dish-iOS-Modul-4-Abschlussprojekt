@@ -16,6 +16,8 @@ struct DelishDishApp: App {
     
     @StateObject private var loginViewModel = LoginViewModel()
     
+    @StateObject private var favoriteViewModel = FavouriteViewModel()
+    
     init() {
         FirebaseConfiguration.shared.setLoggerLevel(.min)
         FirebaseApp.configure()
@@ -25,6 +27,7 @@ struct DelishDishApp: App {
             if loginViewModel.isUserLoggeIn {
                 ContentView()
                     .environmentObject(loginViewModel)
+                    .environmentObject(favoriteViewModel)
             } else {
                 AuthentificationView()
                     .environmentObject(loginViewModel)

@@ -34,7 +34,7 @@ struct AuthentificationView: View {
                 VStack {
                     Spacer()
                         .padding()
-                    Image("Logo") // Logo resmini ekliyoruz
+                    Image("Logo") 
                         .resizable()
                         .scaledToFit()
                         .frame(width: 250, height: 250)
@@ -63,30 +63,30 @@ struct AuthentificationView: View {
                     .padding()
                 }
                 Spacer()
-                .padding()
+                    .padding()
                 
-                .sheet(isPresented: $anmelden){
-                    NavigationView{
-                        LoginView()
-                            .navigationBarItems(trailing: Button(action: {
-                                anmelden.toggle()
-                            }){
-                                Image(systemName: "xmark")
-                                    .foregroundColor(.white)
-                            })
+                    .sheet(isPresented: $anmelden){
+                        NavigationStack{
+                            LoginView()
+                                .navigationBarItems(trailing: Button(action: {
+                                    anmelden.toggle()
+                                }){
+                                    Image(systemName: "xmark")
+                                        .foregroundColor(.white)
+                                })
+                        }
                     }
-                }
-                .sheet(isPresented: $registrieren){
-                    NavigationView{
-                        RegistrierenView()
-                            .navigationBarItems(trailing: Button(action: {
-                                registrieren.toggle()
-                            }){
-                                Image(systemName: "xmark")
-                                    .foregroundColor(.white)
-                            })
+                    .sheet(isPresented: $registrieren){
+                        NavigationStack{
+                            RegistrierenView()
+                                .navigationBarItems(trailing: Button(action: {
+                                    registrieren.toggle()
+                                }){
+                                    Image(systemName: "xmark")
+                                        .foregroundColor(.white)
+                                })
+                        }
                     }
-                }
                 
             }
         }
@@ -109,10 +109,6 @@ struct AuthentificationView: View {
     
     
 }
-
-
-
-
 
 
 

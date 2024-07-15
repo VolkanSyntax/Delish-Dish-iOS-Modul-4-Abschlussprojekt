@@ -11,7 +11,10 @@ struct RecipesDetailsView: View {
     
     let meal: Meal
     
+    @EnvironmentObject var favouriteViewModel: FavouriteViewModel
+    
     @State private var selectedTab: Tab = .ingredients
+    @State private var isFavourite: Bool = false
     
     var body: some View {
         ScrollView {
@@ -29,10 +32,15 @@ struct RecipesDetailsView: View {
                 HStack {
                     Spacer()
                     Button(action: {
-                        // Favorite action
+                        if isFavourite {
+                            favouriteViewModel.removeMealFromFavorites(withId: meal.idMeal)
+                        } else {
+                            favouriteViewModel.addMealToFavorites(meal: meal)
+                        }
+                        isFavourite.toggle()
                     }) {
                         VStack {
-                            Image(systemName: "heart")
+                            Image(systemName: isFavourite ? "heart.fill" : "heart")
                                 .foregroundColor(.red)
                                 .font(.title)
                             Text("Favourite")
@@ -47,7 +55,7 @@ struct RecipesDetailsView: View {
                         }
                     }) {
                         VStack {
-                            Image(systemName: "video")
+                            Image(systemName: "video.bubble")
                                 .foregroundColor(.red)
                                 .font(.title)
                             Text("Youtube")
@@ -117,14 +125,23 @@ struct RecipesDetailsView: View {
                 }
             }
             .navigationTitle("Recipe Details")
+            .onAppear {
+                isFavourite = favouriteViewModel.favoriteMeals.contains(where: { $0.idMeal == meal.idMeal })
+            }
         }
     }
-
-    private func ingredientsList(_ meal: Meal) -> String {
-        var ingredients = [String]()
-        if let ingredient1 = meal.strIngredient1, !ingredient1.isEmpty {
-            ingredients.append(ingredient1)
+    
+    enum Tab {
+        case ingredients, measures, instructions
+    }
+    
+    
+    private func ingredientsList(_ meal: Meal) -> String { // Definiert eine private Funktion, die eine Zutatenliste für eine Mahlzeit erstellt / Bir öğün için malzeme listesini oluşturan özel bir fonksiyon tanımlar
+        var ingredients = [String]() // Initialisiert ein leeres String-Array für die Zutaten / Malzemeler için boş bir string dizisi başlatır
+        if let ingredient1 = meal.strIngredient1, !ingredient1.isEmpty { // Überprüft, ob die erste Zutat vorhanden und nicht leer ist / İlk malzemenin mevcut olup olmadığını ve boş olup olmadığını kontrol eder
+            ingredients.append(ingredient1) // Fügt die erste Zutat dem Array hinzu / İlk malzemeyi diziye ekler
         }
+        
         if let ingredient2 = meal.strIngredient2, !ingredient2.isEmpty {
             ingredients.append(ingredient2)
         }
@@ -179,12 +196,13 @@ struct RecipesDetailsView: View {
         if let ingredient19 = meal.strIngredient19, !ingredient19.isEmpty {
             ingredients.append(ingredient19)
         }
-        if let ingredient20 = meal.strIngredient20, !ingredient20.isEmpty {
-            ingredients.append(ingredient20)
+        if let ingredient20 = meal.strIngredient20, !ingredient20.isEmpty { // Überprüft, ob die zwanzigste Zutat vorhanden und nicht leer ist / Yirminci malzemenin mevcut olup olmadığını ve boş olup olmadığını kontrol eder
+            ingredients.append(ingredient20) // Fügt die zwanzigste Zutat dem Array hinzu / Yirminci malzemeyi diziye ekler
         }
-        return ingredients.joined(separator: "\n")
+        return ingredients.joined(separator: "\n") // Verbindet alle Zutaten im Array zu einem String, getrennt durch neue Zeilen / Dizideki tüm malzemeleri yeni satırlar ile ayırarak bir string olarak birleştirir
     }
-
+    
+    
     private func measuresList(_ meal: Meal) -> String {
         var measures = [String]()
         if let measure1 = meal.strMeasure1, !measure1.isEmpty {
@@ -249,13 +267,12 @@ struct RecipesDetailsView: View {
         }
         return measures.joined(separator: "\n")
     }
-
-    enum Tab {
-        case ingredients, measures, instructions
-    }
+    
 }
+
 
 #Preview {
     RecipesListView()
+        .environmentObject(FavouriteViewModel())
 }
 

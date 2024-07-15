@@ -10,16 +10,11 @@ import SwiftUI
 struct RecipesListView: View {
     
     @StateObject private var viewModel = RecipesListViewModel()
+    @State private var isSearching = false
 
     var body: some View {
         NavigationStack {
             VStack(alignment: .center) {
-                TextField("Search", text: $viewModel.keyword, onCommit: {
-                    viewModel.searchMeals()
-                })
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
-
                 Button(action: {
                     viewModel.loadMeals()
                 }) {
@@ -38,32 +33,47 @@ struct RecipesListView: View {
                     Text(error)
                         .foregroundColor(.red)
                         .padding()
-                } else {
-                    List(viewModel.meals) { meal in
-                        NavigationLink(destination: RecipesDetailsView(meal: meal)) {
-                            HStack {
-                                AsyncImage(url: URL(string: meal.strMealThumb)) { image in
-                                    image
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 100, height: 100)
-                                        .cornerRadius(10)
-                                } placeholder: {
-                                    ProgressView()
-                                }
-                                VStack(alignment: .leading) {
-                                    Text(meal.strMeal)
-                                        .font(.headline)
-                                    Text(meal.strCategory)
-                                        .font(.subheadline)
-                                }
-                                .padding(.leading, 10)
+                }
+                
+                List(viewModel.meals) { meal in
+                    NavigationLink(destination: RecipesDetailsView(meal: meal)) {
+                        HStack {
+                            AsyncImage(url: URL(string: meal.strMealThumb)) { image in
+                                image
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 100, height: 100)
+                                    .cornerRadius(10)
+                            } placeholder: {
+                                ProgressView()
                             }
+                            VStack(alignment: .leading) {
+                                Text(meal.strMeal)
+                                    .font(.headline)
+                                Text(meal.strCategory)
+                                    .font(.subheadline)
+                            }
+                            .padding(.leading, 10)
                         }
                     }
                 }
+                .searchable(text: $viewModel.keyword, prompt: "Search")
+                .autocorrectionDisabled(true)
+                .onSubmit(of: .search) {
+                    viewModel.searchMeals()
+                    isSearching = true
+                }
+                .onChange(of: viewModel.keyword) {
+                    if viewModel.keyword.isEmpty && isSearching {
+                        viewModel.loadMeals()
+                        viewModel.error = nil
+                        isSearching = false
+                    }
+                }
+
+                Spacer()
             }
-            .navigationTitle("RecipeList")
+            .navigationTitle("Recipe List")
             .onAppear {
                 viewModel.loadMeals()
             }
@@ -71,8 +81,11 @@ struct RecipesListView: View {
     }
 }
 
-
-
 #Preview {
     RecipesListView()
+        .environmentObject(FavouriteViewModel())
 }
+
+
+
+

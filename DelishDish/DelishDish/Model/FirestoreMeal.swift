@@ -1,19 +1,16 @@
 //
-//  Meal.swift
+//  FirestoreMeal.swift
 //  DelishDish
 //
-//  Created by Volkan Yücel on 10.07.24.
+//  Created by Volkan Yücel on 12.07.24.
 //
 
 import Foundation
 import FirebaseFirestoreSwift
 
-struct MealList: Codable {
-    let meals: [Meal]
-}
-
-struct Meal: Codable, Identifiable {
+struct FirestoreMeal: Codable, Identifiable {
     
+    @DocumentID var firebaseId: String?
     
     let idMeal: String
     let strMeal: String
@@ -63,11 +60,8 @@ struct Meal: Codable, Identifiable {
     let strMeasure18: String?
     let strMeasure19: String?
     let strMeasure20: String?
-    
-    
+
     var id: String {
-        
-        @DocumentID var firebaseId: String?
         return idMeal
     }
 }

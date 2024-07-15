@@ -40,6 +40,7 @@
 		7E443FE82C3374A4007A3854 /* DelishDishApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E443FE72C3374A4007A3854 /* DelishDishApp.swift */; };
 		7E443FEC2C3374A7007A3854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E443FEB2C3374A7007A3854 /* Assets.xcassets */; };
 		7E443FEF2C3374A7007A3854 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E443FEE2C3374A7007A3854 /* Preview Assets.xcassets */; };
+		7E456E122C4150F900295310 /* FavouriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E456E112C4150F900295310 /* FavouriteViewModel.swift */; };
 		7E68A2AD2C3E7FF0002D1792 /* RecipesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A2AC2C3E7FF0002D1792 /* RecipesListView.swift */; };
 		7E68A2AF2C3E8009002D1792 /* FavouriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A2AE2C3E8009002D1792 /* FavouriteView.swift */; };
 		7E68A2B12C3E8124002D1792 /* ToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A2B02C3E8124002D1792 /* ToDoView.swift */; };
@@ -63,6 +64,7 @@
 		7E443FE72C3374A4007A3854 /* DelishDishApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelishDishApp.swift; sourceTree = "<group>"; };
 		7E443FEB2C3374A7007A3854 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E443FEE2C3374A7007A3854 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7E456E112C4150F900295310 /* FavouriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewModel.swift; sourceTree = "<group>"; };
 		7E68A2AC2C3E7FF0002D1792 /* RecipesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListView.swift; sourceTree = "<group>"; };
 		7E68A2AE2C3E8009002D1792 /* FavouriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteView.swift; sourceTree = "<group>"; };
 		7E68A2B02C3E8124002D1792 /* ToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoView.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 			children = (
 				7EC505EC2C380F790004E66F /* LoginViewModel.swift */,
 				7E68A2B22C3EC6A6002D1792 /* RecipesListViewModel.swift */,
+				7E456E112C4150F900295310 /* FavouriteViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 			files = (
 				7E68A2B32C3EC6A6002D1792 /* RecipesListViewModel.swift in Sources */,
 				7E68A2B12C3E8124002D1792 /* ToDoView.swift in Sources */,
+				7E456E122C4150F900295310 /* FavouriteViewModel.swift in Sources */,
 				7E68A2B52C3EC6CA002D1792 /* Meal.swift in Sources */,
 				7EF91B0F2C383EB400E246B8 /* FireUser.swift in Sources */,
 				7E68A2B72C3EC736002D1792 /* RecipesDetailsView.swift in Sources */,
@@ -461,6 +465,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -490,6 +495,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
