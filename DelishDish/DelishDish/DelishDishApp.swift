@@ -18,6 +18,8 @@ struct DelishDishApp: App {
     
     @StateObject private var favoriteViewModel = FavouriteViewModel()
     
+  
+    
     init() {
         FirebaseConfiguration.shared.setLoggerLevel(.min)
         FirebaseApp.configure()
