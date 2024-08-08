@@ -116,20 +116,23 @@ class ToDoListViewModel: ObservableObject {
         }
     }
     
-    func shareToDoItem(withId id: String?, withUserEmail email: String) {
+    func shareToDoItem(withId id: String?, withUserEmail email: String, completion: @escaping (Bool) -> Void) {
         guard let id else {
             print("Item hat keine id!")
+            completion(false)
             return
         }
 
         firebaseFirestore.collection("users").whereField("email", isEqualTo: email).getDocuments { (querySnapshot, error) in
             if let error = error {
                 print("Error getting user UID: \(error)")
+                completion(false)
                 return
             }
 
             guard let documents = querySnapshot?.documents, !documents.isEmpty else {
                 print("No user found with this email address")
+                completion(false)
                 return
             }
 
@@ -140,6 +143,7 @@ class ToDoListViewModel: ObservableObject {
             ]) { error in
                 if let error {
                     print("Update fehlgeschlagen: \(error)")
+                    completion(false)
                 } else {
                     self.firebaseFirestore.collection("users").document(self.firebaseAuthentication.currentUser!.uid).collection("todos").document(id).getDocument { (document, error) in
                         if let document = document, document.exists, var data = document.data() {
@@ -147,13 +151,16 @@ class ToDoListViewModel: ObservableObject {
                             self.firebaseFirestore.collection("users").document(userId).collection("todos").addDocument(data: data) { error in
                                 if let error {
                                     print("Error adding shared ToDo item: \(error)")
+                                    completion(false)
                                 } else {
                                     print("ToDo item successfully shared with user \(email)")
                                     self.fetchToDoItems()
+                                    completion(true)
                                 }
                             }
                         } else {
                             print("ToDo item does not exist in the original user's collection")
+                            completion(false)
                         }
                     }
                 }

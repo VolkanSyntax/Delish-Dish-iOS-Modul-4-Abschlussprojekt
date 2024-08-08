@@ -10,15 +10,19 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 struct ToDoListView: View {
+    
     @StateObject private var todoListViewModel = ToDoListViewModel()
+    
     @EnvironmentObject private var loginViewModel: LoginViewModel
-
+    
     @State private var showNewToDoItem = false
     @State private var showEditToDoItem = false
     @State private var showShareAlert = false
+    @State private var showShareResultAlert = false
+    @State private var shareResultMessage = ""
     @State private var userEmailToShare = ""
     @State private var selectedToDoItem: FireToDoItem?
-
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -60,7 +64,7 @@ struct ToDoListView: View {
                         }
                         Button(action: {
                             showShareAlert = true
-                            selectedToDoItem = item 
+                            selectedToDoItem = item
                         }) {
                             Image(systemName: "square.and.arrow.up")
                         }
@@ -79,25 +83,30 @@ struct ToDoListView: View {
                         }
                     }
                 }
-                .alert("ToDo Teilen", isPresented: $showShareAlert) {
-                    VStack {
-                        TextField("Benutzer E-Mail", text: $userEmailToShare)
-                            .autocorrectionDisabled(true)
-                            .autocapitalization(.none)
-                        HStack {
-                            Button("Teilen") {
-                                if let item = selectedToDoItem {
-                                    todoListViewModel.shareToDoItem(withId: item.id, withUserEmail: userEmailToShare)
+                .alert("ToDo Teilen", isPresented: $showShareAlert, actions: {
+                    TextField("Benutzer E-Mail", text: $userEmailToShare)
+                        .autocorrectionDisabled(true)
+                        .autocapitalization(.none)
+                    HStack {
+                        Button("Teilen") {
+                            if let item = selectedToDoItem {
+                                todoListViewModel.shareToDoItem(withId: item.id, withUserEmail: userEmailToShare) { success in
+                                    shareResultMessage = success ? "Teilen erfolgreich" : "Fehler beim Teilen"
+                                    showShareResultAlert = true
                                 }
-                                showShareAlert = false
                             }
-                            Button("Abbrechen") {
-                                showShareAlert = false
-                            }
-                            .foregroundColor(.cyan)
+                            userEmailToShare = ""
+                            showShareAlert = false
                         }
+                        Button("Abbrechen") {
+                            userEmailToShare = ""
+                            showShareAlert = false
+                        }
+                        .foregroundColor(.cyan)
                     }
-                    .padding()
+                })
+                .alert(shareResultMessage, isPresented: $showShareResultAlert) {
+                    Button("OK", role: .cancel) { }
                 }
                 .navigationDestination(isPresented: $showNewToDoItem) {
                     AddToDoListView(todoListViewModel: todoListViewModel, isPresented: $showNewToDoItem)
@@ -115,6 +124,11 @@ struct ToDoListView: View {
                 .navigationBarTitleDisplayMode(.inline)
             }
         }
+        .onChange(of: showShareAlert) { oldValue, newValue in
+            if newValue == false {
+                userEmailToShare = ""
+            }
+        }
     }
 }
 
@@ -122,3 +136,5 @@ struct ToDoListView: View {
     ToDoListView()
         .environmentObject(LoginViewModel())
 }
+
+
