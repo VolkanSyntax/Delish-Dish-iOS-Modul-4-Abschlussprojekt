@@ -43,6 +43,12 @@
 		7E68A2B92C3EC9DD002D1792 /* RecipesApiRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A2B82C3EC9DD002D1792 /* RecipesApiRepository.swift */; };
 		7E68A2BB2C3EF250002D1792 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A2BA2C3EF250002D1792 /* ContentView.swift */; };
 		7E8B29B32C3C027100A049E1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8B29B22C3C027100A049E1 /* SettingsView.swift */; };
+		7E9A701C2C63AF4600AD963C /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A701B2C63AF4600AD963C /* Chat.swift */; };
+		7E9A701E2C63AF6B00AD963C /* OpenAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A701D2C63AF6B00AD963C /* OpenAI.swift */; };
+		7E9A70202C63AF8E00AD963C /* RecipesOpenAIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A701F2C63AF8E00AD963C /* RecipesOpenAIRepository.swift */; };
+		7E9A70222C63AFD700AD963C /* RecipesAIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A70212C63AFD700AD963C /* RecipesAIViewModel.swift */; };
+		7E9A70242C63B00800AD963C /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A70232C63B00800AD963C /* MessageView.swift */; };
+		7E9A70282C63B26E00AD963C /* RecipesAIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A70272C63B26E00AD963C /* RecipesAIView.swift */; };
 		7EC505ED2C380F790004E66F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC505EC2C380F790004E66F /* LoginViewModel.swift */; };
 		7EC505EF2C380F8A0004E66F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC505EE2C380F8A0004E66F /* LoginView.swift */; };
 		7EE5D9A32C4AD991007F1F03 /* ToDoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE5D9A22C4AD991007F1F03 /* ToDoListViewModel.swift */; };
@@ -71,6 +77,12 @@
 		7E68A2B82C3EC9DD002D1792 /* RecipesApiRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesApiRepository.swift; sourceTree = "<group>"; };
 		7E68A2BA2C3EF250002D1792 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7E8B29B22C3C027100A049E1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		7E9A701B2C63AF4600AD963C /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		7E9A701D2C63AF6B00AD963C /* OpenAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAI.swift; sourceTree = "<group>"; };
+		7E9A701F2C63AF8E00AD963C /* RecipesOpenAIRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesOpenAIRepository.swift; sourceTree = "<group>"; };
+		7E9A70212C63AFD700AD963C /* RecipesAIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesAIViewModel.swift; sourceTree = "<group>"; };
+		7E9A70232C63B00800AD963C /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		7E9A70272C63B26E00AD963C /* RecipesAIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesAIView.swift; sourceTree = "<group>"; };
 		7EC505EC2C380F790004E66F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		7EC505EE2C380F8A0004E66F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7EE5D9A22C4AD991007F1F03 /* ToDoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewModel.swift; sourceTree = "<group>"; };
@@ -118,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				7E68A2B82C3EC9DD002D1792 /* RecipesApiRepository.swift */,
+				7E9A701F2C63AF8E00AD963C /* RecipesOpenAIRepository.swift */,
 				7E3C570D2C3FE90800EA324F /* ApiKeys.swift */,
 			);
 			path = Repository;
@@ -147,9 +160,10 @@
 				7EB276002C5248DF00BF1168 /* LoginAndRegisterView */,
 				7EB276012C52493B00BF1168 /* RecipesListViewAndRecipesDetailsView */,
 				7EB276022C5249F700BF1168 /* FavouriteView */,
+				7E9A70182C63837400AD963C /* RecipesAIView */,
 				7E8B29B12C3C024B00A049E1 /* ToDoListView */,
-				7E443FE72C3374A4007A3854 /* DelishDishApp.swift */,
 				7E68A2BA2C3EF250002D1792 /* ContentView.swift */,
+				7E443FE72C3374A4007A3854 /* DelishDishApp.swift */,
 				7E443FEB2C3374A7007A3854 /* Assets.xcassets */,
 				7E0EEECF2C38075200E239AC /* GoogleService-Info.plist */,
 				7E443FED2C3374A7007A3854 /* Preview Content */,
@@ -171,6 +185,8 @@
 				7EF91B0E2C383EB400E246B8 /* FireUser.swift */,
 				7E68A2B42C3EC6CA002D1792 /* Meal.swift */,
 				7EE5D9A42C4ADA58007F1F03 /* FireToDoItem.swift */,
+				7E9A701B2C63AF4600AD963C /* Chat.swift */,
+				7E9A701D2C63AF6B00AD963C /* OpenAI.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -186,14 +202,24 @@
 			path = ToDoListView;
 			sourceTree = "<group>";
 		};
+		7E9A70182C63837400AD963C /* RecipesAIView */ = {
+			isa = PBXGroup;
+			children = (
+				7E9A70232C63B00800AD963C /* MessageView.swift */,
+				7E9A70272C63B26E00AD963C /* RecipesAIView.swift */,
+				7E9A70212C63AFD700AD963C /* RecipesAIViewModel.swift */,
+			);
+			path = RecipesAIView;
+			sourceTree = "<group>";
+		};
 		7EB276002C5248DF00BF1168 /* LoginAndRegisterView */ = {
 			isa = PBXGroup;
 			children = (
 				7EC505EE2C380F8A0004E66F /* LoginView.swift */,
 				7EF91B102C38468200E246B8 /* RegistrierenView.swift */,
 				7EF91B122C3847E600E246B8 /* AuthentificationView.swift */,
-				7E8B29B22C3C027100A049E1 /* SettingsView.swift */,
 				7EC505EC2C380F790004E66F /* LoginViewModel.swift */,
+				7E8B29B22C3C027100A049E1 /* SettingsView.swift */,
 			);
 			path = LoginAndRegisterView;
 			sourceTree = "<group>";
@@ -317,7 +343,9 @@
 				7EE5D9A32C4AD991007F1F03 /* ToDoListViewModel.swift in Sources */,
 				7EE5D9A52C4ADA58007F1F03 /* FireToDoItem.swift in Sources */,
 				7EE5D9A72C4BB149007F1F03 /* AddToDoListView.swift in Sources */,
+				7E9A701E2C63AF6B00AD963C /* OpenAI.swift in Sources */,
 				7E68A2B32C3EC6A6002D1792 /* RecipesListViewModel.swift in Sources */,
+				7E9A70202C63AF8E00AD963C /* RecipesOpenAIRepository.swift in Sources */,
 				7E68A2B12C3E8124002D1792 /* ToDoListView.swift in Sources */,
 				7E456E122C4150F900295310 /* FavouriteViewModel.swift in Sources */,
 				7E68A2B52C3EC6CA002D1792 /* Meal.swift in Sources */,
@@ -325,9 +353,13 @@
 				7E68A2B72C3EC736002D1792 /* RecipesDetailsView.swift in Sources */,
 				7E68A2AF2C3E8009002D1792 /* FavouriteView.swift in Sources */,
 				7E8B29B32C3C027100A049E1 /* SettingsView.swift in Sources */,
+				7E9A70282C63B26E00AD963C /* RecipesAIView.swift in Sources */,
+				7E9A70222C63AFD700AD963C /* RecipesAIViewModel.swift in Sources */,
 				7E443FE82C3374A4007A3854 /* DelishDishApp.swift in Sources */,
+				7E9A701C2C63AF4600AD963C /* Chat.swift in Sources */,
 				7EF91B132C3847E600E246B8 /* AuthentificationView.swift in Sources */,
 				7E68A2B92C3EC9DD002D1792 /* RecipesApiRepository.swift in Sources */,
+				7E9A70242C63B00800AD963C /* MessageView.swift in Sources */,
 				7EF91B112C38468200E246B8 /* RegistrierenView.swift in Sources */,
 				7E68A2BB2C3EF250002D1792 /* ContentView.swift in Sources */,
 				7EC505EF2C380F8A0004E66F /* LoginView.swift in Sources */,

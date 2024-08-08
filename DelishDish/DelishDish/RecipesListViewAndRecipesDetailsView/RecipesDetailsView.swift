@@ -125,6 +125,7 @@ struct RecipesDetailsView: View {
                 }
             }
             .navigationTitle("Recipe Details")
+            .navigationBarTitleDisplayMode(.inline)
             .onAppear {
                 isFavourite = favouriteViewModel.favoriteMeals.contains(where: { $0.idMeal == meal.idMeal })
             }

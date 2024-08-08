@@ -15,19 +15,22 @@ struct ContentView: View {
             RecipesListView()
                 .tabItem { Label("Recipe", systemImage: "book.pages") }
                 .tag(0)
-                .background(Color.green.opacity(4.1))
-            
+
             FavouriteView()
                 .tabItem { Label("Favourite", systemImage: "heart") }
                 .tag(1)
             
+            RecipesAIView()
+                .tabItem { Label ("RecipesAI", systemImage: "cpu") }
+                .tag(2)
+            
             ToDoListView()
                 .tabItem { Label("ToDo", systemImage: "list.clipboard") }
-                .tag(2)
+                .tag(3)
             
             SettingsView()
                 .tabItem { Label("Settings", systemImage: "gear") }
-                .tag(3)
+                .tag(4)
         }
     }
 }

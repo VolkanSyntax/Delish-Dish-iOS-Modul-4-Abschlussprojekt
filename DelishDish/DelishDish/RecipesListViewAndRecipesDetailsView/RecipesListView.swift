@@ -15,18 +15,7 @@ struct RecipesListView: View {
     var body: some View {
         NavigationStack {
             VStack(alignment: .center) {
-                Button(action: {
-                    viewModel.loadMeals()
-                }) {
-                    Text("Recipes Generator")
-                        .padding()
-                        .frame(width: 175, height: 45)
-                        .background(Color.black)
-                        .foregroundColor(.white)
-                        .cornerRadius(20)
-                }
-                .padding(.horizontal)
-                
+                Divider()
                 if viewModel.isLoading {
                     ProgressView()
                 } else if let error = viewModel.error {
@@ -74,6 +63,7 @@ struct RecipesListView: View {
                 Spacer()
             }
             .navigationTitle("Recipe List")
+            .navigationBarTitleDisplayMode(.inline)
             .onAppear {
                 viewModel.loadMeals()
             }
