@@ -43,7 +43,7 @@ class RecipesAIViewModel: ObservableObject {
                     print("Failed to send message: \(error)")
                 }
             } else {
-                let errorMessage = "I can only provide information about Recipes.\nIch kann nur Informationen über Rezepte bereitstellen."
+                let errorMessage = "I can only provide information about Recipes."
                 let errorChat = Chat(id: UUID().uuidString, content: errorMessage, createAt: Date(), sender: .chatGPT)
                 chats.append(errorChat)
             }
