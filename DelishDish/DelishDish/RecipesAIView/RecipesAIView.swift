@@ -10,7 +10,6 @@ import SwiftUI
 struct RecipesAIView: View {
     
     @StateObject var viewModel = RecipesAIViewModel() // Erzeugt und verwaltet eine Instanz des ViewModels. / ViewModel'in bir örneğini oluşturur ve yönetir.
-    
     var body: some View {
         NavigationStack { // Stellt eine Navigation für die Ansicht bereit. / Görünüm için bir gezinme sağlar.
             VStack {
