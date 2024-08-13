@@ -13,7 +13,6 @@ struct ToDoListView: View {
     
     @StateObject private var todoListViewModel = ToDoListViewModel()
     
-    @EnvironmentObject private var loginViewModel: LoginViewModel
     
     @State private var showNewToDoItem = false
     @State private var showEditToDoItem = false

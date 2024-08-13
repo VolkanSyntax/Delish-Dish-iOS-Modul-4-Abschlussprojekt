@@ -25,7 +25,6 @@ struct SplashScreenView: View {
                         Image("Splash-logo")
                         Text("Delish-Dish")
                             .font(Font.custom("Krona One", size: 36))
-                            .foregroundColor(viewModel.color)
                             .frame(width: 200, height: 35)
                     }
                     .scaleEffect(viewModel.size)
