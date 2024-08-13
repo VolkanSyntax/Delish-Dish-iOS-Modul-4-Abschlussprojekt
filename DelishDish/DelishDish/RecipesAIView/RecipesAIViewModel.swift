@@ -18,7 +18,7 @@ class RecipesAIViewModel: ObservableObject {
     private let repository = RecipesOpenAIRepository()
     
     private let keywords = [
-        "yemek", "tarifi", "hazırlanır", "yapılışı", // Türkçe
+        "yemek", "tarifi", "hazırlanır", "hazirlanir","yapılışı","yapilisi", // Türkçe
         "recipe", "food", "meal", // İngilizce
         "Essen", "Rezept", "Lebensmittelrezept", "Nahrungsmittelrezept",
         "Kochrezept" // Almanca
@@ -31,7 +31,7 @@ class RecipesAIViewModel: ObservableObject {
         isLoading = true
         let chat = Chat(id: UUID().uuidString, content: message, createAt: Date(), sender: .me)
         chats.append(chat)
-        message = ""  // Mesaj gönderildikten sonra TextField'i temizlemek için
+        message = ""
         
         Task {
             if isMessageAboutRecipes(chat.content) {
@@ -43,7 +43,7 @@ class RecipesAIViewModel: ObservableObject {
                     print("Failed to send message: \(error)")
                 }
             } else {
-                let errorMessage = "I can only provide information about Recipes."
+                let errorMessage = "I can only provide information about Recipes.\nIch kann nur Informationen über Rezepte bereitstellen."
                 let errorChat = Chat(id: UUID().uuidString, content: errorMessage, createAt: Date(), sender: .chatGPT)
                 chats.append(errorChat)
             }
@@ -61,5 +61,7 @@ class RecipesAIViewModel: ObservableObject {
         return false
     }
 }
+
+
 
 

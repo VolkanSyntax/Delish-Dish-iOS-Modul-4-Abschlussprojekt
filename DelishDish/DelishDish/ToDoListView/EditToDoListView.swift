@@ -23,7 +23,7 @@ struct EditToDoListView: View {
                 }
                 Section(header: Text("Description")) {
                     TextEditor(text: $todoItem.description)
-                        .frame(height: 200)
+                        .frame(height: 500)
                         .autocorrectionDisabled(true)
                         .onChange(of: todoItem.description) {
                             print("Description updated: \(todoItem.description)")

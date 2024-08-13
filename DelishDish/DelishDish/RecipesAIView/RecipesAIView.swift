@@ -42,27 +42,16 @@ struct RecipesAIView: View {
                         }
                     }
                 }
+                
                 Divider()
-                    .padding(.bottom, 10)
-                HStack {
-                    TextField("Enter a message", text: $viewModel.message)
-                        .padding()
-                        .background(Color.gray.opacity(0.2))
-                        .autocorrectionDisabled(true)
-                        .cornerRadius(25)
-                    Button {
-                        viewModel.sendMessage()
-                    } label: {
-                        Image(systemName: "arrow.right.circle.fill")
-                            .foregroundColor(.blue)
-                            .padding(.horizontal, 5)
-                            .font(.largeTitle)
-                            .fontWeight(.semibold)
-                    }
-                }
+                    .padding(.bottom, 1)
+                
+                MessageBar(message: $viewModel.message, sendMessageAction: {
+                    viewModel.sendMessage()
+                })
             }
             .padding()
-            .navigationTitle("SwiftUI ChatGPT")
+            .navigationTitle("RecipesAI Generator")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
@@ -72,6 +61,7 @@ struct RecipesAIView: View {
                         Image(systemName: "trash.fill")
                             .font(.caption)
                         Text("Clear All")
+                            .font(.footnote)
                     }
                 }
             }
@@ -81,7 +71,12 @@ struct RecipesAIView: View {
 
 #Preview {
     RecipesAIView()
+        .environmentObject(RecipesAIViewModel())
 }
+
+
+
+
 
 
 

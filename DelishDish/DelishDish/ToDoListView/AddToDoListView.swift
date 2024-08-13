@@ -23,7 +23,7 @@ struct AddToDoListView: View {
                 }
                 Section(header: Text("Description")) {
                     TextEditor(text: $description)
-                        .frame(height: 200)
+                        .frame(height: 500)
                         .autocorrectionDisabled(true)
                 }
             }

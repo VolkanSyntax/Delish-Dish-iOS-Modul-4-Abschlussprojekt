@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7E0EEED02C38075200E239AC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E0EEECF2C38075200E239AC /* GoogleService-Info.plist */; };
+		7E2AA4D62C6A4BB400083963 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2AA4D52C6A4BB400083963 /* SplashScreenView.swift */; };
+		7E2AA4DA2C6A53ED00083963 /* SplashScreenMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7E2AA4D92C6A53EC00083963 /* SplashScreenMusic.mp3 */; };
 		7E3C570E2C3FE90800EA324F /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3C570D2C3FE90800EA324F /* ApiKeys.swift */; };
 		7E443FE82C3374A4007A3854 /* DelishDishApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E443FE72C3374A4007A3854 /* DelishDishApp.swift */; };
 		7E443FEC2C3374A7007A3854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E443FEB2C3374A7007A3854 /* Assets.xcassets */; };
@@ -42,6 +44,7 @@
 		7E68A2B72C3EC736002D1792 /* RecipesDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A2B62C3EC736002D1792 /* RecipesDetailsView.swift */; };
 		7E68A2B92C3EC9DD002D1792 /* RecipesApiRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A2B82C3EC9DD002D1792 /* RecipesApiRepository.swift */; };
 		7E68A2BB2C3EF250002D1792 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E68A2BA2C3EF250002D1792 /* ContentView.swift */; };
+		7E7B7D842C6BAE7A005A4A59 /* SplashScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7B7D832C6BAE7A005A4A59 /* SplashScreenViewModel.swift */; };
 		7E8B29B32C3C027100A049E1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8B29B22C3C027100A049E1 /* SettingsView.swift */; };
 		7E9A701C2C63AF4600AD963C /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A701B2C63AF4600AD963C /* Chat.swift */; };
 		7E9A701E2C63AF6B00AD963C /* OpenAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9A701D2C63AF6B00AD963C /* OpenAI.swift */; };
@@ -62,6 +65,8 @@
 
 /* Begin PBXFileReference section */
 		7E0EEECF2C38075200E239AC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7E2AA4D52C6A4BB400083963 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		7E2AA4D92C6A53EC00083963 /* SplashScreenMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SplashScreenMusic.mp3; sourceTree = "<group>"; };
 		7E3C570D2C3FE90800EA324F /* ApiKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
 		7E443FE42C3374A4007A3854 /* DelishDish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DelishDish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E443FE72C3374A4007A3854 /* DelishDishApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelishDishApp.swift; sourceTree = "<group>"; };
@@ -76,6 +81,7 @@
 		7E68A2B62C3EC736002D1792 /* RecipesDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesDetailsView.swift; sourceTree = "<group>"; };
 		7E68A2B82C3EC9DD002D1792 /* RecipesApiRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesApiRepository.swift; sourceTree = "<group>"; };
 		7E68A2BA2C3EF250002D1792 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7E7B7D832C6BAE7A005A4A59 /* SplashScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewModel.swift; sourceTree = "<group>"; };
 		7E8B29B22C3C027100A049E1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		7E9A701B2C63AF4600AD963C /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		7E9A701D2C63AF6B00AD963C /* OpenAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAI.swift; sourceTree = "<group>"; };
@@ -126,6 +132,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E2AA4D42C6A4B4000083963 /* SplashScreenView */ = {
+			isa = PBXGroup;
+			children = (
+				7E2AA4D52C6A4BB400083963 /* SplashScreenView.swift */,
+				7E7B7D832C6BAE7A005A4A59 /* SplashScreenViewModel.swift */,
+				7E2AA4D92C6A53EC00083963 /* SplashScreenMusic.mp3 */,
+			);
+			path = SplashScreenView;
+			sourceTree = "<group>";
+		};
 		7E3C570C2C3FE8CE00EA324F /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +171,7 @@
 		7E443FE62C3374A4007A3854 /* DelishDish */ = {
 			isa = PBXGroup;
 			children = (
+				7E443FE72C3374A4007A3854 /* DelishDishApp.swift */,
 				7E3C570C2C3FE8CE00EA324F /* Repository */,
 				7E8B29B02C3BFF6300A049E1 /* Model */,
 				7EB276002C5248DF00BF1168 /* LoginAndRegisterView */,
@@ -162,8 +179,8 @@
 				7EB276022C5249F700BF1168 /* FavouriteView */,
 				7E9A70182C63837400AD963C /* RecipesAIView */,
 				7E8B29B12C3C024B00A049E1 /* ToDoListView */,
+				7E2AA4D42C6A4B4000083963 /* SplashScreenView */,
 				7E68A2BA2C3EF250002D1792 /* ContentView.swift */,
-				7E443FE72C3374A4007A3854 /* DelishDishApp.swift */,
 				7E443FEB2C3374A7007A3854 /* Assets.xcassets */,
 				7E0EEECF2C38075200E239AC /* GoogleService-Info.plist */,
 				7E443FED2C3374A7007A3854 /* Preview Content */,
@@ -330,6 +347,7 @@
 				7E443FEF2C3374A7007A3854 /* Preview Assets.xcassets in Resources */,
 				7E443FEC2C3374A7007A3854 /* Assets.xcassets in Resources */,
 				7E0EEED02C38075200E239AC /* GoogleService-Info.plist in Resources */,
+				7E2AA4DA2C6A53ED00083963 /* SplashScreenMusic.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +365,8 @@
 				7E68A2B32C3EC6A6002D1792 /* RecipesListViewModel.swift in Sources */,
 				7E9A70202C63AF8E00AD963C /* RecipesOpenAIRepository.swift in Sources */,
 				7E68A2B12C3E8124002D1792 /* ToDoListView.swift in Sources */,
+				7E2AA4D62C6A4BB400083963 /* SplashScreenView.swift in Sources */,
+				7E7B7D842C6BAE7A005A4A59 /* SplashScreenViewModel.swift in Sources */,
 				7E456E122C4150F900295310 /* FavouriteViewModel.swift in Sources */,
 				7E68A2B52C3EC6CA002D1792 /* Meal.swift in Sources */,
 				7EF91B0F2C383EB400E246B8 /* FireUser.swift in Sources */,
