@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct MessageView: View {
     
     let chat: Chat // Die Chat-Nachricht, die in der Ansicht angezeigt wird. / Görünümde gösterilecek sohbet mesajı.
@@ -14,11 +16,16 @@ struct MessageView: View {
     var body: some View {
         HStack {
             if chat.sender == .me { Spacer() } // Fügt einen Abstand ein, wenn der Absender der Benutzer selbst ist, um die Nachricht nach rechts zu schieben. / Eğer gönderen kullanıcı (ben) ise, mesajı sağa itmek için boşluk ekler.
-            Text(chat.content) // Zeigt den Inhalt der Nachricht an. / Mesajın içeriğini gösterir.
-                .foregroundColor(chat.sender == .me ? .white : nil) // Setzt die Textfarbe auf Weiß, wenn die Nachricht vom Benutzer gesendet wurde. / Eğer mesaj kullanıcıdan geldiyse, metin rengini beyaz yapar.
-                .padding() // Fügt eine Innenabstand um den Text hinzu. / Metin etrafına iç boşluk ekler.
-                .background(chat.sender == .me ? Color.blue : Color.gray.opacity(0.4)) // Setzt den Hintergrund der Nachricht: Blau für Benutzer, Grau für ChatGPT. / Mesajın arka plan rengini ayarlar: Kullanıcı için mavi, ChatGPT için gri.
-                .cornerRadius(25) // Macht die Ecken des Nachrichtenfelds rund. / Mesaj kutusunun köşelerini yuvarlak yapar.
+            VStack(alignment: chat.sender == .me ? .trailing : .leading) {
+                Text(chat.content) // Zeigt den Inhalt der Nachricht an. / Mesajın içeriğini gösterir.
+                    .foregroundColor(chat.sender == .me ? .white : nil) // Setzt die Textfarbe auf Weiß, wenn die Nachricht vom Benutzer gesendet wurde. / Eğer mesaj kullanıcıdan geldiyse, metin rengini beyaz yapar.
+                    .padding() // Fügt eine Innenabstand um den Text hinzu. / Metin etrafına iç boşluk ekler.
+                    .background(chat.sender == .me ? Color.blue : Color.gray.opacity(0.4)) // Setzt den Hintergrund der Nachricht: Blau für Benutzer, Grau für ChatGPT. / Mesajın arka plan rengini ayarlar: Kullanıcı için mavi, ChatGPT için gri.
+                    .cornerRadius(25) // Macht die Ecken des Nachrichtenfelds rund. / Mesaj kutusunun köşelerini yuvarlak yapar.
+                Text(chat.createAt, style: .time) // Zeigt die Uhrzeit der Nachricht an. / Mesajın saatini gösterir.
+                    .font(.caption)
+                    .foregroundColor(.gray)
+            }
             if chat.sender == .chatGPT { Spacer() } // Fügt einen Abstand ein, wenn der Absender ChatGPT ist, um die Nachricht nach links zu schieben. / Eğer gönderen ChatGPT ise, mesajı sola itmek için boşluk ekler.
         }
     }
@@ -33,6 +40,7 @@ struct MessageView: View {
         }
     }
 }
+
 
 struct MessageBar: View {
     @Binding var message: String // Der Text der Nachricht, die der Benutzer eingibt. / Kullanıcının girdiği mesajın metni.

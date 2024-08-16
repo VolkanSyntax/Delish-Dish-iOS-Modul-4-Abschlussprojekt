@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E02AF8E2C6FCA6A0088BDB4 /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E02AF8D2C6FCA6A0088BDB4 /* ApiKeys.swift */; };
 		7E0EEED02C38075200E239AC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E0EEECF2C38075200E239AC /* GoogleService-Info.plist */; };
 		7E2AA4D62C6A4BB400083963 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2AA4D52C6A4BB400083963 /* SplashScreenView.swift */; };
 		7E2AA4DA2C6A53ED00083963 /* SplashScreenMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7E2AA4D92C6A53EC00083963 /* SplashScreenMusic.mp3 */; };
-		7E3C570E2C3FE90800EA324F /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3C570D2C3FE90800EA324F /* ApiKeys.swift */; };
 		7E443FE82C3374A4007A3854 /* DelishDishApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E443FE72C3374A4007A3854 /* DelishDishApp.swift */; };
 		7E443FEC2C3374A7007A3854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E443FEB2C3374A7007A3854 /* Assets.xcassets */; };
 		7E443FEF2C3374A7007A3854 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E443FEE2C3374A7007A3854 /* Preview Assets.xcassets */; };
@@ -64,10 +64,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E02AF8D2C6FCA6A0088BDB4 /* ApiKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
 		7E0EEECF2C38075200E239AC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7E2AA4D52C6A4BB400083963 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		7E2AA4D92C6A53EC00083963 /* SplashScreenMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SplashScreenMusic.mp3; sourceTree = "<group>"; };
-		7E3C570D2C3FE90800EA324F /* ApiKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
 		7E443FE42C3374A4007A3854 /* DelishDish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DelishDish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E443FE72C3374A4007A3854 /* DelishDishApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelishDishApp.swift; sourceTree = "<group>"; };
 		7E443FEB2C3374A7007A3854 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -147,7 +147,7 @@
 			children = (
 				7E68A2B82C3EC9DD002D1792 /* RecipesApiRepository.swift */,
 				7E9A701F2C63AF8E00AD963C /* RecipesOpenAIRepository.swift */,
-				7E3C570D2C3FE90800EA324F /* ApiKeys.swift */,
+				7E02AF8D2C6FCA6A0088BDB4 /* ApiKeys.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -375,6 +375,7 @@
 				7E8B29B32C3C027100A049E1 /* SettingsView.swift in Sources */,
 				7E9A70282C63B26E00AD963C /* RecipesAIView.swift in Sources */,
 				7E9A70222C63AFD700AD963C /* RecipesAIViewModel.swift in Sources */,
+				7E02AF8E2C6FCA6A0088BDB4 /* ApiKeys.swift in Sources */,
 				7E443FE82C3374A4007A3854 /* DelishDishApp.swift in Sources */,
 				7E9A701C2C63AF4600AD963C /* Chat.swift in Sources */,
 				7EF91B132C3847E600E246B8 /* AuthentificationView.swift in Sources */,
@@ -385,7 +386,6 @@
 				7EC505EF2C380F8A0004E66F /* LoginView.swift in Sources */,
 				7EE5D9A92C4BB162007F1F03 /* EditToDoListView.swift in Sources */,
 				7E68A2AD2C3E7FF0002D1792 /* RecipesListView.swift in Sources */,
-				7E3C570E2C3FE90800EA324F /* ApiKeys.swift in Sources */,
 				7EC505ED2C380F790004E66F /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
