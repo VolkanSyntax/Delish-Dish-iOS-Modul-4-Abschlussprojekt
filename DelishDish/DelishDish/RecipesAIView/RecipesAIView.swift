@@ -22,7 +22,7 @@ struct RecipesAIView: View {
                                         Button(action: {
                                             UIPasteboard.general.string = chat.content // Ermöglicht das Kopieren des Nachrichteninhalts. / Mesaj içeriğini kopyalamayı sağlar.
                                         }) {
-                                            Text("Copy") // Zeigt "Copy" im Kontextmenü an. / Bağlam menüsünde "Kopyala" ifadesini gösterir.
+                                            Text("copy") // Zeigt "Copy" im Kontextmenü an. / Bağlam menüsünde "Kopyala" ifadesini gösterir.
                                             Image(systemName: "doc.on.doc")
                                         }
                                     }
@@ -50,7 +50,7 @@ struct RecipesAIView: View {
                 })
             }
             .padding()
-            .navigationTitle("RecipesAI Generator") // Setzt den Titel der Navigationsleiste. / Gezinme çubuğu başlığını ayarlar.
+            .navigationTitle("recipeai_generator") // Setzt den Titel der Navigationsleiste. / Gezinme çubuğu başlığını ayarlar.
             .navigationBarTitleDisplayMode(.inline) // Stellt sicher, dass der Titel im Inline-Modus angezeigt wird. / Başlığın satır içi modda gösterilmesini sağlar.
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
@@ -59,7 +59,7 @@ struct RecipesAIView: View {
                     } label: {
                         Image(systemName: "trash.fill")
                             .font(.caption)
-                        Text("Clear All") // Zeigt "Clear All" an, um alle Nachrichten zu löschen. / Tüm mesajları silmek için "Hepsini Sil" ifadesini gösterir.
+                        Text("clear_all") // Zeigt "Clear All" an, um alle Nachrichten zu löschen. / Tüm mesajları silmek için "Hepsini Sil" ifadesini gösterir.
                             .font(.footnote)
                     }
                 }

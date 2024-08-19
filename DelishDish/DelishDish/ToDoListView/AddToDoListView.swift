@@ -17,23 +17,23 @@ struct AddToDoListView: View {
     var body: some View {
         NavigationStack {
             Form {
-                Section(header: Text("Title")) {
-                    TextField("Enter title", text: $title)
+                Section(header: Text("title")) {
+                    TextField("enter_title", text: $title)
                         .autocorrectionDisabled(true)
                 }
-                Section(header: Text("Description")) {
+                Section(header: Text("description")) {
                     TextEditor(text: $description)
                         .frame(height: 500)
                         .autocorrectionDisabled(true)
                 }
             }
-            .navigationBarTitle("Add ToDo", displayMode: .inline)
+            .navigationBarTitle("add_todo", displayMode: .inline)
             .navigationBarItems(
                 trailing: Button(action: {
                     todoListViewModel.createNewToDoItem(title: title, description: description)
                     isPresented = false
                 }) {
-                    Text("Save")
+                    Text("save")
                 }
                 .disabled(title.isEmpty || description.isEmpty)
             )

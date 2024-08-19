@@ -39,7 +39,7 @@ struct AuthentificationView: View {
                         .scaledToFit()
                         .frame(width: 250, height: 250)
                         .padding(.bottom, 110)
-                    Button("Anmelden"){
+                    Button("sign_in"){
                         anmeldenToggle()
                     }
                     
@@ -51,7 +51,7 @@ struct AuthentificationView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 15))
                     .padding()
                     
-                    Button("Registrieren"){
+                    Button("register"){
                         registrierenToggle()
                     }
                     .padding()

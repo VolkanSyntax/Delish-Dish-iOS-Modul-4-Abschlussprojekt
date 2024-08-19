@@ -48,7 +48,7 @@ struct MessageBar: View {
 
     var body: some View {
         HStack {
-            TextField("Enter a message", text: $message, onCommit: {
+            TextField("enter_a_message", text: $message, onCommit: {
                 sendMessage() // Ruft die Funktion sendMessage() auf, wenn der Benutzer die Eingabetaste drückt. / Kullanıcı "Enter" tuşuna bastığında sendMessage() işlevini çağırır.
             })
                 .padding(12) // Fügt eine Innenabstand um das Textfeld hinzu. / Metin alanının etrafına iç boşluk ekler.

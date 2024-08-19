@@ -35,7 +35,7 @@ struct RegistrierenView: View {
                 .edgesIgnoringSafeArea(.all)
             ScrollView {
                 VStack {
-                    Text("Neu hier? Jetzt registrieren!")
+                    Text("not_registered_sign_up_now")
                         .font(.title2)
                         .bold()
                         .foregroundStyle(.white)
@@ -43,7 +43,7 @@ struct RegistrierenView: View {
                     HStack {
                         ZStack(alignment: .leading) {
                             if name.isEmpty {
-                                Text("Name")
+                                Text("name")
                                     .foregroundColor(.white)
                                     .padding(.leading, 15)
                             }
@@ -55,7 +55,7 @@ struct RegistrierenView: View {
                         
                         ZStack(alignment: .leading) {
                             if nachname.isEmpty {
-                                Text("Nachname")
+                                Text("last_name")
                                     .foregroundColor(.white)
                                     .padding(.leading, 15)
                             }
@@ -69,7 +69,7 @@ struct RegistrierenView: View {
                     HStack {
                         ZStack(alignment: .leading) {
                             if email.isEmpty {
-                                Text("E-Mail")
+                                Text("e_mail")
                                     .foregroundColor(.white)
                                     .padding(.leading, 15)
                             }
@@ -88,7 +88,7 @@ struct RegistrierenView: View {
                     
                     ZStack(alignment: .leading) {
                         if password.isEmpty {
-                            Text("Password")
+                            Text("password")
                                 .foregroundColor(.white)
                                 .padding(.leading, 15)
                         }
@@ -120,7 +120,7 @@ struct RegistrierenView: View {
                     
                     ZStack(alignment: .leading) {
                         if passwordCheck.isEmpty {
-                            Text("Password bestätigen!")
+                            Text("confirm_password")
                                 .foregroundColor(.white)
                                 .padding(.leading, 15)
                         }
@@ -150,7 +150,7 @@ struct RegistrierenView: View {
                     
                     Spacer(minLength: 300)
                     
-                    Button("Registrieren!") {
+                    Button("register") {
                         viewModel.register(password: password, name: name, nachname: nachname, email: email, passwordCheck: passwordCheck)
                     }
                     .frame(maxWidth: .infinity)

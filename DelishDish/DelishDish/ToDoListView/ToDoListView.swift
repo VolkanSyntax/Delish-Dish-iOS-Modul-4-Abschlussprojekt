@@ -87,7 +87,7 @@ struct ToDoListView: View {
                     .swipeActions {
                         // Schaltfläche zum Löschen des To-Do-Elements.
                         // Yapılacak öğeyi silmek için düğme.
-                        Button("Löschen", role: .destructive) {
+                        Button("delete", role: .destructive) {
                             todoListViewModel.deleteToDoItem(withId: item.id)
                         }
                         
@@ -114,23 +114,23 @@ struct ToDoListView: View {
                         Button(action: {
                             showNewToDoItem = true
                         }) {
-                            Label("Hinzufügen", systemImage: "plus.circle.fill")
+                            Label("add", systemImage: "plus.circle.fill")
                         }
                     }
                 }
-                .alert("ToDo Teilen", isPresented: $showShareAlert, actions: {
+                .alert("share_todo", isPresented: $showShareAlert, actions: {
                     // Eingabefeld für die E-Mail des Benutzers, mit dem das To-Do-Element geteilt werden soll.
                     // Yapılacak öğenin paylaşılacağı kullanıcının e-posta adresini girmek için giriş alanı.
-                    TextField("Benutzer E-Mail", text: $userEmailToShare)
+                    TextField("user_email", text: $userEmailToShare)
                         .autocorrectionDisabled(true)
                         .autocapitalization(.none)
                     HStack {
                         // Schaltfläche zum Bestätigen des Teilens.
                         // Paylaşımı onaylamak için düğme.
-                        Button("Teilen") {
+                        Button("share") {
                             if let item = selectedToDoItem {
                                 todoListViewModel.shareToDoItem(withId: item.id, withUserEmail: userEmailToShare) { success in
-                                    shareResultMessage = success ? "Teilen erfolgreich" : "Fehler beim Teilen"
+                                    shareResultMessage = success ? "share_successful" : "error_sharing"
                                     showShareResultAlert = true
                                 }
                             }
@@ -139,7 +139,7 @@ struct ToDoListView: View {
                         }
                         // Schaltfläche zum Abbrechen der Freigabe.
                         // Paylaşımı iptal etmek için düğme.
-                        Button("Abbrechen") {
+                        Button("cancel") {
                             userEmailToShare = ""
                             showShareAlert = false
                         }
@@ -149,7 +149,7 @@ struct ToDoListView: View {
                 .alert(shareResultMessage, isPresented: $showShareResultAlert) {
                     // Schaltfläche zum Schließen des Freigabeergebnis-Alerts.
                     // Paylaşım sonucu uyarısını kapatmak için düğme.
-                    Button("OK", role: .cancel) { }
+                    Button("ok", role: .cancel) { }
                 }
                 .navigationDestination(isPresented: $showNewToDoItem) {
                     // Zeigt die Ansicht zum Hinzufügen eines neuen To-Do-Elements an.
@@ -169,7 +169,7 @@ struct ToDoListView: View {
                 }
                 // Setzt den Titel der Navigationsleiste.
                 // Gezinti çubuğu başlığını ayarlar.
-                .navigationTitle("Meine ToDo Liste")
+                .navigationTitle("my_todo_list")
                 .navigationBarTitleDisplayMode(.inline)
             }
         }

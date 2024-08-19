@@ -46,7 +46,7 @@ struct RecipesListView: View {
                         }
                     }
                 }
-                .searchable(text: $viewModel.keyword, prompt: "Search")
+                .searchable(text: $viewModel.keyword, prompt: "search")
                 .autocorrectionDisabled(true)
                 .onSubmit(of: .search) {
                     viewModel.searchMeals()
@@ -62,7 +62,7 @@ struct RecipesListView: View {
 
                 Spacer()
             }
-            .navigationTitle("Recipe List")
+            .navigationTitle("list_of_recipes")
             .navigationBarTitleDisplayMode(.inline)
             .onAppear {
                 viewModel.loadMeals()

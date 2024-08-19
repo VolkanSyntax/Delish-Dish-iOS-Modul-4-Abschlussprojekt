@@ -58,6 +58,7 @@
 		7EE5D9A52C4ADA58007F1F03 /* FireToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE5D9A42C4ADA58007F1F03 /* FireToDoItem.swift */; };
 		7EE5D9A72C4BB149007F1F03 /* AddToDoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE5D9A62C4BB149007F1F03 /* AddToDoListView.swift */; };
 		7EE5D9A92C4BB162007F1F03 /* EditToDoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE5D9A82C4BB162007F1F03 /* EditToDoListView.swift */; };
+		7EF273FC2C7341F40059579C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7EF273FB2C7341F40059579C /* Localizable.xcstrings */; };
 		7EF91B0F2C383EB400E246B8 /* FireUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF91B0E2C383EB400E246B8 /* FireUser.swift */; };
 		7EF91B112C38468200E246B8 /* RegistrierenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF91B102C38468200E246B8 /* RegistrierenView.swift */; };
 		7EF91B132C3847E600E246B8 /* AuthentificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF91B122C3847E600E246B8 /* AuthentificationView.swift */; };
@@ -95,6 +96,7 @@
 		7EE5D9A42C4ADA58007F1F03 /* FireToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireToDoItem.swift; sourceTree = "<group>"; };
 		7EE5D9A62C4BB149007F1F03 /* AddToDoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoListView.swift; sourceTree = "<group>"; };
 		7EE5D9A82C4BB162007F1F03 /* EditToDoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditToDoListView.swift; sourceTree = "<group>"; };
+		7EF273FB2C7341F40059579C /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		7EF91B0E2C383EB400E246B8 /* FireUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireUser.swift; sourceTree = "<group>"; };
 		7EF91B102C38468200E246B8 /* RegistrierenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrierenView.swift; sourceTree = "<group>"; };
 		7EF91B122C3847E600E246B8 /* AuthentificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthentificationView.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				7E443FEB2C3374A7007A3854 /* Assets.xcassets */,
 				7E0EEECF2C38075200E239AC /* GoogleService-Info.plist */,
 				7E443FED2C3374A7007A3854 /* Preview Content */,
+				7EF273FB2C7341F40059579C /* Localizable.xcstrings */,
 			);
 			path = DelishDish;
 			sourceTree = "<group>";
@@ -325,6 +328,8 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				tr,
 			);
 			mainGroup = 7E443FDB2C3374A4007A3854;
 			packageReferences = (
@@ -345,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E443FEF2C3374A7007A3854 /* Preview Assets.xcassets in Resources */,
+				7EF273FC2C7341F40059579C /* Localizable.xcstrings in Resources */,
 				7E443FEC2C3374A7007A3854 /* Assets.xcassets in Resources */,
 				7E0EEED02C38075200E239AC /* GoogleService-Info.plist in Resources */,
 				7E2AA4DA2C6A53ED00083963 /* SplashScreenMusic.mp3 in Resources */,

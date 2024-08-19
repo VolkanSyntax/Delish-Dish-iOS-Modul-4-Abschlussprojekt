@@ -13,15 +13,15 @@ struct ContentView: View {
     var body: some View {
         TabView(selection: $selectedTab) {
             RecipesListView()
-                .tabItem { Label("Recipe", systemImage: "book.pages") }
+                .tabItem { Label("recipes", systemImage: "book.pages") }
                 .tag(0)
 
             FavouriteView()
-                .tabItem { Label("Favourite", systemImage: "heart") }
+                .tabItem { Label("favorites", systemImage: "heart") }
                 .tag(1)
             
             RecipesAIView()
-                .tabItem { Label ("RecipesAI", systemImage: "cpu") }
+                .tabItem { Label ("recipeai", systemImage: "cpu") }
                 .tag(2)
             
             ToDoListView()
@@ -29,7 +29,7 @@ struct ContentView: View {
                 .tag(3)
             
             SettingsView()
-                .tabItem { Label("Settings", systemImage: "gear") }
+                .tabItem { Label("setting", systemImage: "gear") }
                 .tag(4)
         }
     }

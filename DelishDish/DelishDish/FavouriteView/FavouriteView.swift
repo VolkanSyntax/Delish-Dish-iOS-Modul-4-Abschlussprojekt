@@ -51,7 +51,7 @@ struct FavouriteView: View {
                     }
                 }
             }
-            .navigationTitle("My Favourites")
+            .navigationTitle("my_favorites")
             .navigationBarTitleDisplayMode(.inline)
             .onAppear {
                 favouriteViewModel.fetchFavoriteMeals()

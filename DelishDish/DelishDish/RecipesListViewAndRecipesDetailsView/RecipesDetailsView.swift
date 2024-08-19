@@ -43,7 +43,7 @@ struct RecipesDetailsView: View {
                             Image(systemName: isFavourite ? "heart.fill" : "heart")
                                 .foregroundColor(.red)
                                 .font(.title)
-                            Text("Favourite")
+                            Text("favorite")
                                 .foregroundStyle(.red)
                         }
                     }
@@ -58,7 +58,7 @@ struct RecipesDetailsView: View {
                             Image(systemName: "video.bubble")
                                 .foregroundColor(.red)
                                 .font(.title)
-                            Text("Youtube")
+                            Text("youtube")
                                 .foregroundStyle(.red)
                         }
                     }
@@ -69,7 +69,7 @@ struct RecipesDetailsView: View {
                 Divider()
                 
                 HStack {
-                    Text("Name:")
+                    Text("dish_name")
                         .font(.title2)
                         .foregroundColor(.gray)
                     Spacer()
@@ -81,7 +81,7 @@ struct RecipesDetailsView: View {
                 Divider()
                 
                 HStack {
-                    Text("Category:")
+                    Text("category")
                         .font(.callout)
                         .foregroundColor(.gray)
                     Spacer()
@@ -93,7 +93,7 @@ struct RecipesDetailsView: View {
                 Divider()
                 
                 HStack {
-                    Text("Area:")
+                    Text("area")
                         .font(.callout)
                         .foregroundColor(.gray)
                     Spacer()
@@ -105,9 +105,9 @@ struct RecipesDetailsView: View {
                 Divider()
                 
                 Picker("Select", selection: $selectedTab) {
-                    Text("Ingredient").tag(Tab.ingredients)
-                    Text("Measure").tag(Tab.measures)
-                    Text("Instructions").tag(Tab.instructions)
+                    Text("ingredient").tag(Tab.ingredients)
+                    Text("measure").tag(Tab.measures)
+                    Text("instructions").tag(Tab.instructions)
                 }
                 .pickerStyle(SegmentedPickerStyle())
                 .padding(.horizontal)
@@ -124,7 +124,7 @@ struct RecipesDetailsView: View {
                         .padding(.horizontal)
                 }
             }
-            .navigationTitle("Recipe Details")
+            .navigationTitle("recipe_details")
             .navigationBarTitleDisplayMode(.inline)
             .onAppear {
                 isFavourite = favouriteViewModel.favoriteMeals.contains(where: { $0.idMeal == meal.idMeal })

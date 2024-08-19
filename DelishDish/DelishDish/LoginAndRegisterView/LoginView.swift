@@ -30,7 +30,7 @@ struct LoginView: View {
                 .edgesIgnoringSafeArea(.all)
             ScrollView {
                 VStack {
-                    Text("Melde dich jetzt an!")
+                    Text("sign_up_now")
                         .font(.title2)
                         .bold()
                         .foregroundStyle(.white)
@@ -38,7 +38,7 @@ struct LoginView: View {
                     HStack {
                         ZStack(alignment: .leading) {
                             if email.isEmpty {
-                                Text("E-Mail")
+                                Text("e_mail")
                                     .foregroundColor(.white)
                                     .padding(.leading, 15)
                             }
@@ -58,7 +58,7 @@ struct LoginView: View {
                     
                     ZStack(alignment: .leading) {
                         if password.isEmpty {
-                            Text("Password")
+                            Text("password")
                                 .foregroundColor(.white)
                                 .padding(.leading, 15)
                         }
@@ -90,7 +90,7 @@ struct LoginView: View {
                     
                     Spacer(minLength: 430)
                     
-                    Button("Anmelden!") {
+                    Button("sign_in") {
                         viewModel.login(email: email, password: password)
                     }
                     .frame(maxWidth: .infinity)

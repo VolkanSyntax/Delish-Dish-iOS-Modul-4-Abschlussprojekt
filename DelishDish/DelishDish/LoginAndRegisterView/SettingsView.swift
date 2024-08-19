@@ -23,13 +23,13 @@ struct SettingsView: View {
                 }
 
                 Section {
-                    Button("Abmelden") {
+                    Button("log_out") {
                         loginViewModel.logout()
                     }
                     .foregroundColor(.red)
                 }
             }
-            .navigationTitle("Settings")
+            .navigationTitle("settings")
             .navigationBarTitleDisplayMode(.inline)
             }
         }
