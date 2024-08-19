@@ -184,9 +184,9 @@
 				7E2AA4D42C6A4B4000083963 /* SplashScreenView */,
 				7E68A2BA2C3EF250002D1792 /* ContentView.swift */,
 				7E443FEB2C3374A7007A3854 /* Assets.xcassets */,
+				7EF273FB2C7341F40059579C /* Localizable.xcstrings */,
 				7E0EEECF2C38075200E239AC /* GoogleService-Info.plist */,
 				7E443FED2C3374A7007A3854 /* Preview Content */,
-				7EF273FB2C7341F40059579C /* Localizable.xcstrings */,
 			);
 			path = DelishDish;
 			sourceTree = "<group>";

@@ -5,7 +5,6 @@
 //  Created by Volkan Yücel on 07.08.24.
 //
 
-import SwiftUI
 
 import SwiftUI
 
@@ -96,7 +95,7 @@ struct MessageBar: View {
 
 #Preview {
     VStack {
-        MessageView(chat: Chat(id: UUID().uuidString, content: "Sample message from me", createAt: Date(), sender: .me)) // Zeigt eine Beispielnachricht in der Vorschau an. / Önizlemede örnek bir mesaj gösterir.
+        MessageView(chat: Chat(id: UUID().uuidString, content: "Sample message from me", createAt: Date(), sender: .chatGPT)) // Zeigt eine Beispielnachricht in der Vorschau an. / Önizlemede örnek bir mesaj gösterir.
         Spacer()
         MessageBar(message: .constant(""), sendMessageAction: {}) // Zeigt eine Beispielnachrichteneingabeleiste in der Vorschau an. / Önizlemede örnek bir mesaj giriş çubuğu gösterir.
     }

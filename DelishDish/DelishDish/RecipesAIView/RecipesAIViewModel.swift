@@ -8,33 +8,33 @@
 
 import Foundation
 import Combine
+import NaturalLanguage
 
-class RecipesAIViewModel: ObservableObject {
+class RecipesAIViewModel: ObservableObject { // Erstellt eine ViewModel-Klasse, die Daten speichert und verwaltet. / Bir ViewModel sınıfı oluşturur, bu sınıf verileri tutar ve yönetir.
     
-    @Published var chats: [Chat] = [] // Eine Liste der Chat-Nachrichten. / Sohbet mesajlarının listesi.
+    @Published var chats: [Chat] = [] // Hält eine Liste der Chat-Nachrichten. / Sohbet mesajlarının listesini tutar.
     @Published var isLoading: Bool = false // Gibt an, ob eine Nachricht gesendet oder empfangen wird. / Bir mesajın gönderilip gönderilmediğini veya alınıp alınmadığını belirtir.
     @Published var message: String = "" // Der aktuelle Nachrichteninhalt, den der Benutzer eingibt. / Kullanıcının girdiği mevcut mesaj içeriği.
     
     private let repository = RecipesOpenAIRepository() // Eine Instanz des Repositories, das die Nachrichten verarbeitet. / Mesajları işleyen bir repository örneği.
     
-    private let keywords = [ // Schlüsselwörter, um zu bestimmen, ob die Nachricht sich auf Rezepte bezieht. / Mesajın tariflerle ilgili olup olmadığını belirlemek için anahtar kelimeler.
-        "yemek", "tarifi", "hazırlanır", "hazirlanir","yapılışı","yapilisi", // Türkçe / Türkisch
-        "recipe", "food", "meal", // İngilizce / Englisch
-        "Essen", "Rezept", "Lebensmittelrezept", "Nahrungsmittelrezept",
-        "Kochrezept" // Almanca / Deutsch
-    ]
-    
-    @MainActor
-    func sendMessage() { // Diese Methode sendet eine Nachricht und verarbeitet die Antwort. / Bu yöntem bir mesaj gönderir ve yanıtı işler.
-        guard !message.isEmpty else { return } // Sendet die Nachricht nur, wenn sie nicht leer ist. / Mesaj boş değilse mesajı gönderir.
+    @MainActor // Gibt an, dass diese Funktion im Hauptthread ausgeführt wird. / Bu işlevin ana iş parçacığında çalıştığını belirtir.
+    func sendMessage() {
+        guard !message.isEmpty else { return } // Sendet die Nachricht nur, wenn sie nicht leer ist, andernfalls wird der Vorgang abgebrochen. / Mesaj boş değilse mesajı gönderir, boşsa işlemi sonlandırır.
         
-        isLoading = true // Setzt den Ladezustand auf wahr, um anzuzeigen, dass eine Nachricht gesendet wird. / Bir mesaj gönderildiğini belirtmek için yüklenme durumunu doğru olarak ayarlar.
+        isLoading = true // Startet den Ladezustand und gibt an, dass eine Nachricht gesendet wird. / Yükleme durumunu başlatır ve bir mesajın gönderildiğini belirtir.
         let chat = Chat(id: UUID().uuidString, content: message, createAt: Date(), sender: .me) // Erstellt eine neue Chat-Nachricht. / Yeni bir sohbet mesajı oluşturur.
         chats.append(chat) // Fügt die Nachricht zur Liste der Chats hinzu. / Mesajı sohbet listesine ekler.
         message = "" // Leert das Nachrichtenfeld nach dem Senden. / Gönderdikten sonra mesaj alanını temizler.
         
-        Task {
-            if isMessageAboutRecipes(chat.content) { // Prüft, ob die Nachricht sich auf Rezepte bezieht. / Mesajın tariflerle ilgili olup olmadığını kontrol eder.
+        Task { // Startet asynchrone Operationen. / Asenkron işlemleri başlatır.
+            defer {
+                isLoading = false // Beendet den Ladezustand, wird ausgeführt, wenn die Operation abgeschlossen ist oder ein Fehler auftritt. / Yükleme durumunu sonlandırır, işlem tamamlandığında veya hata oluştuğunda çalışır.
+            }
+            
+            let isRelated = await isRelatedToCooking(chat.content) // Überprüft, ob die Nachricht sich auf Kochen bezieht. / Mesajın yemekle ilgili olup olmadığını kontrol eder.
+            
+            if isRelated { // Wenn die Nachricht sich auf das Kochen bezieht. / Eğer mesaj yemekle ilgiliyse.
                 do {
                     let responseText = try await repository.sendMessage(prompt: chat.content) // Sendet die Nachricht an das Repository und wartet auf eine Antwort. / Mesajı repository'ye gönderir ve yanıt bekler.
                     let responseChat = Chat(id: UUID().uuidString, content: responseText, createAt: Date(), sender: .chatGPT) // Erstellt eine neue ChatGPT-Antwort. / Yeni bir ChatGPT yanıtı oluşturur.
@@ -42,25 +42,42 @@ class RecipesAIViewModel: ObservableObject {
                 } catch {
                     print("Failed to send message: \(error)") // Gibt eine Fehlermeldung aus, falls das Senden fehlschlägt. / Gönderme başarısız olursa hata mesajı yazdırır.
                 }
-            } else {
-                let errorMessage = "I can only provide information about Recipes." // Eine Fehlermeldung, wenn die Nachricht sich nicht auf Rezepte bezieht. / Mesaj tariflerle ilgili değilse, bir hata mesajı.
-                let errorChat = Chat(id: UUID().uuidString, content: errorMessage, createAt: Date(), sender: .chatGPT) // Erstellt eine neue Fehlermeldung von ChatGPT. / ChatGPT'den yeni bir hata mesajı oluşturur.
+            } else { // Wenn die Nachricht sich nicht auf das Kochen bezieht. / Eğer mesaj yemekle ilgili değilse.
+                let languageCode = Locale.current.language.languageCode?.identifier ?? "en" // Ruft den Sprachcode des Geräts ab, falls dies fehlschlägt, wird Englisch standardmäßig angenommen. / Cihazın dil kodunu alır, eğer başarısız olursa İngilizceyi varsayar.
+                let errorMessage = localizedErrorMessage(for: languageCode) // Ruft die Fehlermeldung basierend auf dem Sprachcode ab. / Dil koduna göre hata mesajını alır.
+                let errorChat = Chat(id: UUID().uuidString, content: errorMessage, createAt: Date(), sender: .chatGPT) // Erstellt eine neue Fehlermeldung. / Yeni bir hata mesajı oluşturur.
                 chats.append(errorChat) // Fügt die Fehlermeldung zur Liste der Chats hinzu. / Hata mesajını sohbet listesine ekler.
             }
-            
-            isLoading = false // Setzt den Ladezustand auf falsch, nachdem die Antwort verarbeitet wurde. / Yanıt işlendiğinde yüklenme durumunu yanlış olarak ayarlar.
         }
     }
     
-    private func isMessageAboutRecipes(_ message: String) -> Bool { // Überprüft, ob die Nachricht eines der Schlüsselwörter enthält. / Mesajın anahtar kelimelerden birini içerip içermediğini kontrol eder.
-        for keyword in keywords { // Durchläuft die Liste der Schlüsselwörter. / Anahtar kelimeler listesini döngüyle geçirir.
-            if message.localizedCaseInsensitiveContains(keyword) { // Prüft, ob die Nachricht das Schlüsselwort enthält, unabhängig von der Groß- und Kleinschreibung. / Mesajın, büyük/küçük harfe duyarlı olmaksızın anahtar kelimeyi içerip içermediğini kontrol eder.
-                return true // Gibt true zurück, wenn ein Schlüsselwort gefunden wird. / Bir anahtar kelime bulunduğunda doğru değerini döndürür.
-            }
+    private func isRelatedToCooking(_ message: String) async -> Bool { // Bestimmt, ob die Nachricht sich auf das Kochen bezieht. / Mesajın yemekle ilgili olup olmadığını belirler.
+        do {
+            let classificationPrompt = "Is the following message related to cooking? Please answer with 'yes' or 'no': \(message)" // Text, der fragt, ob die Nachricht sich auf das Kochen bezieht. / Mesajın yemekle ilgili olup olmadığını soran metin.
+            let classificationResponse = try await repository.sendMessage(prompt: classificationPrompt) // Sendet die Nachricht an das Repository und wartet auf eine Antwort. / Mesajı repository'ye gönderir ve yanıt bekler.
+            let isCookingRelated = classificationResponse.lowercased().contains("yes") // Überprüft, ob die Antwort "yes" enthält. / Yanıtın "yes" içerip içermediğini kontrol eder.
+            return isCookingRelated // Gibt true zurück, wenn die Antwort "yes" ist. / Yanıt "yes" ise true döner.
+        } catch {
+            print("Failed to classify message: \(error)") // Gibt eine Fehlermeldung aus, falls die Klassifizierung der Nachricht fehlschlägt. / Yanıtı sınıflandırma başarısız olursa hata mesajı yazdırır.
+            return false // Gibt false zurück im Fehlerfall. / Hata durumunda false döner.
         }
-        return false // Gibt false zurück, wenn kein Schlüsselwort gefunden wird. / Anahtar kelime bulunmazsa yanlış değerini döndürür.
+    }
+    
+    
+    private func localizedErrorMessage(for languageCode: String) -> String { // Gibt die passende Fehlermeldung basierend auf dem Sprachcode zurück. / Dil koduna göre uygun hata mesajını döner.
+        switch languageCode {
+        case "tr": // Wenn der Sprachcode Türkisch ist. / Eğer dil kodu Türkçe ise.
+            return "Bu soru yemek üzerine değil, sadece yemekle ilgili sorulara yanıt verebilirim." // Türkische Fehlermeldung. / Türkçe hata mesajı.
+        case "de": // Wenn der Sprachcode Deutsch ist. / Eğer dil kodu Almanca ise.
+            return "Diese Frage bezieht sich nicht auf das Kochen. Ich kann nur Fragen im Zusammenhang mit Rezepten beantworten." // Deutsche Fehlermeldung. / Almanca hata mesajı.
+        default: // Wenn der Sprachcode Englisch oder eine andere Sprache ist. / Eğer dil kodu İngilizce ise veya diğer dillerde ise.
+            return "This question is not related to cooking. I can only answer questions related to recipes." // Englische Fehlermeldung. / İngilizce hata mesajı.
+        }
     }
 }
+
+
+
 
 
 
