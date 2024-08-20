@@ -53,6 +53,14 @@ DelishDish bietet dir leckere Rezepte, mit denen du beeindruckende Gerichte zube
   <img src="./img/ToDoListView.png" style="height: 500px; object-fit: cover;">
 </div>
 
+#
+
+- MarketAngebotenListView
+  
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <img src="./img/MarketAngebotenListView.png" style="height: 500px; object-fit: cover;">
+</div>
+  
 
 ## Features
 Hier kommen alle geplanten Features der App rein mit dem Status, ob es bereits umgesetzt wurde.
