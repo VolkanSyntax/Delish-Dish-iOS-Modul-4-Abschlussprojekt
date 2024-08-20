@@ -16,13 +16,13 @@ DelishDish bietet dir leckere Rezepte, mit denen du beeindruckende Gerichte zube
 
 
 - AuthentificationView  
-- LoginView  
 - RegistrierenView
+- LoginView 
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
   <img src="./img/AuthentificationView.png" style="height: 500px; object-fit: cover;">
-  <img src="./img/DelishDish - LoginView - Registieren_2.png" style="height: 500px; object-fit: cover;">
-  <img src="./img/DelishDish - LoginView - Registieren_2.png" style="height: 500px; object-fit: cover;">
+  <img src="./img/RegistrierenView.png" style="height: 500px; object-fit: cover;">
+  <img src="./img/LoginView.png" style="height: 500px; object-fit: cover;">
 </div>
 
 
