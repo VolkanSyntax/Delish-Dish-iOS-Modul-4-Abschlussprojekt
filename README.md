@@ -17,7 +17,9 @@ DelishDish bietet dir leckere Rezepte, mit denen du beeindruckende Gerichte zube
 
 - AuthentificationView  
 - RegistrierenView
-- LoginView 
+- LoginView
+
+
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
   <img src="./img/AuthentificationView.png" style="height: 500px; object-fit: cover;">
@@ -25,17 +27,20 @@ DelishDish bietet dir leckere Rezepte, mit denen du beeindruckende Gerichte zube
   <img src="./img/LoginView.png" style="height: 500px; object-fit: cover;">
 </div>
 
-
+#
 - RecipesListView
 - RecipesDetailsView
-- ProfileView
+- FavouriteView
+
+
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
   <img src="./img/RecipesListView.png" style="height: 500px; object-fit: cover;">
   <img src="./img/RecipesDetailsView.png" style="height: 500px; object-fit: cover;">
-  <img src="./img/ProfileView.png" style="height: 500px; object-fit: cover;">
+  <img src="./img/FavouriteView.png" style="height: 500px; object-fit: cover;">
 </div>
 
+#
 
 
 - FavouriteView
