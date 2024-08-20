@@ -1,27 +1,38 @@
 
-# DelishDish <div style="display: flex; flex-wrap: wrap; gap: 10px;"> <img src="./img/Delish-Dish Logo.png" style="height: 150px; object-fit: cover;"> </div>
+<h1 align="center">DelishDish</h1>
+
+<p align="center">
+  <img src="./img/Delish-Dish Logo.png" alt="DelishDish Logo" style="height: 150px; object-fit: cover;">
+</p>
 
 
-- ### **Leckere Rezepte und mehr in deiner Hand!**
+
+<p align="center">
+  <strong><span style="font-size: 1.5em;">Leckere Rezepte und mehr in deiner Hand!</span></strong>
+</p>
+
 
 
 
 DelishDish bietet dir leckere Rezepte, mit denen du beeindruckende Gerichte zubereiten kannst, und du kannst diese Rezepte zu deinen Favoriten hinzufügen. Außerdem kannst du eine To-Do-Liste erstellen, um deine Aufgaben zu organisieren. Ideal für alle, die gerne kochen und ihr tägliches Leben organisiert halten möchten. Wenn du bestimmte Rezepte nicht findest oder nach speziellen Rezepten suchst, kannst du sie mit der KI-gestützten Rezeptsuche finden. Die App stellt dir einen KI-Assistenten zur Verfügung. Du kannst die wöchentlichen und täglichen Angebote der Supermärkte verfolgen und deine Einkaufsliste erstellen. Um deine Einkaufsliste zu erstellen, kannst du ToDo verwenden und die Liste, die du erstellt hast, mit den E-Mail-Adressen der registrierten DelishDish-Nutzer teilen.
 
 
-
+#
   
-# Die Ansichten der DelishDish-App
+<h1 align="center">Die Ansichten der DelishDish-App</h1>
 
 
-- SplashScreenView
 
-  
-<div style="text-align: center;">
+<p align="center">• SplashScreenView</p>
+
+
+<p align="center">
   <img src="./img/SplashScreenView .gif" alt="SplashScreenView" style="width: 240px;">
-</div>
+</p>
+
 
 #
+
 
 - AuthentificationView  
 - RegistrierenView
