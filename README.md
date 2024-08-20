@@ -26,10 +26,18 @@ DelishDish bietet dir leckere Rezepte, mit denen du beeindruckende Gerichte zube
 </div>
 
 
-### Weitere Ansichten
-- RecipeListView
-- RecipesGeneratorView
-- RecipeListDetailsView
+- RecipesListView
+- RecipesDetailsView
+- ProfileView
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <img src="./img/DelsihDish - RecipesListView_3.png" style="height: 500px; object-fit: cover;">
+  <img src="./img/DelsihDish - RecipesGeneratorView_12.png" style="height: 500px; object-fit: cover;">
+  <img src="./img/DelishDish - RecpeListDetailsView - Ingredient_4.png" style="height: 500px; object-fit: cover;">
+</div>
+
+
+
 - FavouriteView
 - ToDoView
 - SettingsView
