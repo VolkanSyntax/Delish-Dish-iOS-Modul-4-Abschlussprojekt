@@ -12,7 +12,7 @@ Du kannst auch ToDo verwenden, um deine Einkaufsliste zu erstellen.
 
 
   
-# In Figma designte Beispielansichten der DelishDish App
+# Die Ansichten der DelishDish-App
 
 LoginView
 
