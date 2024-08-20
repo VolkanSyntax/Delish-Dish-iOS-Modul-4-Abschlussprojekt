@@ -43,21 +43,14 @@ DelishDish bietet dir leckere Rezepte, mit denen du beeindruckende Gerichte zube
 #
 
 
-- FavouriteView
-- ToDoView
-- SettingsView
+- ProfileView
+- RecipesAIView
+- ToDoListView
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
   <img src="./img/DelsihDish - RecipesListView_3.png" style="height: 500px; object-fit: cover;">
   <img src="./img/DelsihDish - RecipesGeneratorView_12.png" style="height: 500px; object-fit: cover;">
-  <img src="./img/DelishDish - RecpeListDetailsView - Ingredient_4.png" style="height: 500px; object-fit: cover;">
-  <img src="./img/DelishDish - RecpeListDetailsView - Measure_5.png" style="height: 500px; object-fit: cover;">
-  <img src="./img/DelishDish - RecpeListDetailsView - Instructions_6.png" style="height: 500px; object-fit: cover;">
-  <img src="./img/DelishDish - RecpeListDetailsView - Instructions mit Favorite_7.png" style="height: 500px; object-fit: cover;">
-  <img src="./img/DelsihDish - FavouriteView_8.png" style="height: 500px; object-fit: cover;">
-  <img src="./img/DelsihDish - ToDoView_9.png" style="height: 500px; object-fit: cover;">
-  <img src="./img/DelsihDish - ToDoView - Sheet_10.png" style="height: 500px; object-fit: cover;">
-  <img src="./img/DelsihDish - SettingsView_11.png" style="height: 500px; object-fit: cover;">
+  <img src="./img/DelsihDish - RecipesGeneratorView_12.png" style="height: 500px; object-fit: cover;">
 </div>
 
 
