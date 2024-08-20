@@ -85,7 +85,6 @@ struct RecipesListView: View {
             }
             .navigationDestination(isPresented: $showSettings) {
                 ProfileView()
-                    .environmentObject(LoginViewModel())
             }
             .onAppear {
                 viewModel.loadMeals()
@@ -96,6 +95,7 @@ struct RecipesListView: View {
 
 #Preview {
     RecipesListView()
+        .environmentObject(LoginViewModel())
         .environmentObject(FavouriteViewModel())
 }
 
