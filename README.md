@@ -48,9 +48,9 @@ DelishDish bietet dir leckere Rezepte, mit denen du beeindruckende Gerichte zube
 - ToDoListView
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="./img/DelsihDish - ProfileView.png" style="height: 500px; object-fit: cover;">
-  <img src="./img/DelsihDish - RecipesAIView.png" style="height: 500px; object-fit: cover;">
-  <img src="./img/DelsihDish - ToDoListView.png" style="height: 500px; object-fit: cover;">
+  <img src="./img/ProfileView.png" style="height: 500px; object-fit: cover;">
+  <img src="./img/RecipesAIView.png" style="height: 500px; object-fit: cover;">
+  <img src="./img/ToDoListView.png" style="height: 500px; object-fit: cover;">
 </div>
 
 
