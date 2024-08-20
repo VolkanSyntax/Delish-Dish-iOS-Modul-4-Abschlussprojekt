@@ -28,8 +28,8 @@ struct ContentView: View {
                 .tabItem { Label("ToDo", systemImage: "list.clipboard") }
                 .tag(3)
             
-            SettingsView()
-                .tabItem { Label("setting", systemImage: "gear") }
+            MarketAngebotenListView()
+                .tabItem { Label("Market", systemImage: "basket.fill") }
                 .tag(4)
         }
     }

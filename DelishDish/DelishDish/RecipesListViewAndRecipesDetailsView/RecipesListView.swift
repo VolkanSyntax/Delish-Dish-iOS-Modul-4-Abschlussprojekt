@@ -10,8 +10,10 @@ import SwiftUI
 struct RecipesListView: View {
     
     @StateObject private var viewModel = RecipesListViewModel()
+    
     @State private var isSearching = false
-
+    @State private var showSettings = false
+    
     var body: some View {
         NavigationStack {
             VStack(alignment: .center) {
@@ -59,11 +61,32 @@ struct RecipesListView: View {
                         isSearching = false
                     }
                 }
-
+                
                 Spacer()
             }
             .navigationTitle("list_of_recipes")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        showSettings = true
+                    }) {
+                        VStack {
+                            Image(systemName: "person.crop.circle")
+                                .imageScale(.large)
+                                .foregroundColor(.blue)
+                            Text("profile")
+                                .font(.caption2)
+                                .foregroundColor(.gray)
+                        }
+                        
+                    }
+                }
+            }
+            .navigationDestination(isPresented: $showSettings) {
+                ProfileView()
+                    .environmentObject(LoginViewModel())
+            }
             .onAppear {
                 viewModel.loadMeals()
             }

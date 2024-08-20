@@ -1,5 +1,5 @@
 //
-//  SettingsView.swift
+//  ProfileView.swift
 //  DelishDish
 //
 //  Created by Volkan Yücel on 08.07.24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SettingsView: View {
+struct ProfileView: View {
     
     // MARK: VARIABLE -
     
@@ -37,6 +37,6 @@ struct SettingsView: View {
 }
 
 #Preview {
-    SettingsView()
+    ProfileView()
         .environmentObject(LoginViewModel())
 }
