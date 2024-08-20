@@ -15,7 +15,7 @@ DelishDish bietet dir leckere Rezepte, mit denen du beeindruckende Gerichte zube
 
 
 <div style="text-align: center;">
-  <img src="./img/SplashScreenView" alt="SplashScreenView" style="width: 500px;">
+  <img src="./img/SplashScreenView.gif" alt="SplashScreenView" style="width: 500px;">
 </div>
 
 
