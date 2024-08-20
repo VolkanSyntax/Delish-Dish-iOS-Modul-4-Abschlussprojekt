@@ -14,10 +14,14 @@ DelishDish bietet dir leckere Rezepte, mit denen du beeindruckende Gerichte zube
 # Die Ansichten der DelishDish-App
 
 
+- SplashScreenView
+
+  
 <div style="text-align: center;">
-  <img src="./img/SplashScreenView.gif" alt="SplashScreenView" style="width: 500px;">
+  <img src="./img/SplashScreenView .gif" alt="SplashScreenView" style="width: 240px;">
 </div>
 
+#
 
 - AuthentificationView  
 - RegistrierenView
