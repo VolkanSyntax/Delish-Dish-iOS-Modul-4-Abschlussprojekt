@@ -2,11 +2,7 @@
 
 - ### **Leckere Rezepte und mehr in deiner Hand!**
 
-DelishDish bietet dir leckere Rezepte, mit denen du beeindruckende Gerichte zubereiten kannst. Außerdem kannst du eine To-Do-Liste hinzufügen, um deine Aufgaben zu organisieren. 
-Ideal für alle, die gerne kochen und ihren Alltag organisiert halten möchten. 
-Wenn du bestimmte Rezepte nicht findest oder nach speziellen Rezepten suchst, kannst du sie mit KI Rezepte finden. 
-Die App stellt dir einen KI-Assistenten zur Verfügung und du kannst die wöchentlichen und täglichen Angebote der Supermärkte verfolgen, um deine Einkaufsliste zu erstellen. 
-Du kannst auch ToDo verwenden, um deine Einkaufsliste zu erstellen.
+DelishDish bietet dir leckere Rezepte, mit denen du beeindruckende Gerichte zubereiten kannst, und du kannst diese Rezepte zu deinen Favoriten hinzufügen. Außerdem kannst du eine To-Do-Liste erstellen, um deine Aufgaben zu organisieren. Ideal für alle, die gerne kochen und ihr tägliches Leben organisiert halten möchten. Wenn du bestimmte Rezepte nicht findest oder nach speziellen Rezepten suchst, kannst du sie mit der KI-gestützten Rezeptsuche finden. Die App stellt dir einen KI-Assistenten zur Verfügung. Du kannst die wöchentlichen und täglichen Angebote der Supermärkte verfolgen und deine Einkaufsliste erstellen. Um deine Einkaufsliste zu erstellen, kannst du ToDo verwenden und die Liste, die du erstellt hast, mit den E-Mail-Adressen der registrierten DelishDish-Nutzer teilen.
 
 
 
