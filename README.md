@@ -22,6 +22,7 @@ DelishDish bietet dir leckere Rezepte, mit denen du beeindruckende Gerichte zube
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
   <img src="./img/DelishDish - LoginView - Anmelden_1.png" style="height: 500px; object-fit: cover;">
   <img src="./img/DelishDish - LoginView - Registieren_2.png" style="height: 500px; object-fit: cover;">
+  <img src="./img/DelishDish - LoginView - Registieren_2.png" style="height: 500px; object-fit: cover;">
 </div>
 
 
