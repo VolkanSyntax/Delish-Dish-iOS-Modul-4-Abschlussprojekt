@@ -86,20 +86,20 @@ DelishDish bietet dir leckere Rezepte, mit denen du beeindruckende Gerichte zube
   
 
 ## Features
-Hier kommen alle geplanten Features der App rein mit dem Status, ob es bereits umgesetzt wurde.
+#### Hier sind alle geplanten Features der App aufgelistet, zusammen mit dem Status ihrer Umsetzung. Diese Liste zeigt die Aktionen, die in der App durchgeführt werden können, oder die Möglichkeiten, die den Benutzern zur Verfügung stehen.
 
+#
+  - [ ] **Benutzer können sich registrieren und anmelden**: Sie können ein Konto erstellen und sich in der App anmelden.
 
-  - [ ] Benutzer können sich registrieren und anmelden: Sie können ein Konto erstellen und sich in der App anmelden.
+  - [ ] **Benutzer können Rezepte anzeigen und durchsuchen**: Sie können Rezepte einsehen und über eine Suchfunktion finden.
 
-  - [ ] Benutzer können Rezepte anzeigen und durchsuchen: Sie können Rezepte einsehen und über eine Suchfunktion finden.
+  - [ ] **Benutzer können Lieblingsrezepte zu Favoriten hinzufügen und später schnell darauf zugreifen.**
 
-  - [ ] Benutzer können Lieblingsrezepte zu Favoriten hinzufügen und später schnell darauf zugreifen.
+  - [ ] **Benutzer können den KI-Assistenten nach fehlenden oder speziellen Rezepten fragen.**
 
-  - [ ] Benutzer können den KI-Assistenten nach fehlenden oder speziellen Rezepten fragen.
+  - [ ] **Benutzer können To-Do-Listen erstellen und mit anderen teilen.**
 
-  - [ ] Benutzer können To-Do-Listen erstellen und mit anderen teilen.
-
-  - [ ] Benutzer können Angebotsseiten von Supermärkten anzeigen und Produkte zur To-Do-Liste hinzufügen.
+  - [ ] **Benutzer können Angebotsseiten von Supermärkten anzeigen und Produkte zur To-Do-Liste hinzufügen.**
 
 #
 
