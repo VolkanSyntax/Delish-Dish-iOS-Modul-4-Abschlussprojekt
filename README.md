@@ -96,7 +96,7 @@ Hier kommen alle geplanten Features der App rein mit dem Status, ob es bereits u
 
 - [ ] Lieblingsrezepte Favoriten speichern
 
-
+#
 
 ## Technischer Aufbau
 
@@ -104,10 +104,10 @@ Hier kommen alle geplanten Features der App rein mit dem Status, ob es bereits u
 In meinem Projekt habe ich die MVVM-Architektur verwendet. Die Ordnerstruktur sieht wie folgt 
 
  - DelishDishApp
+ - Repository
  - Models
  - Views
  - ViewModels
- - Services
 
 
 #### Datenspeicherung
