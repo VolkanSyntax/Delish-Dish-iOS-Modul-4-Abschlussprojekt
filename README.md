@@ -117,6 +117,7 @@ In meinem Projekt habe ich die MVVM-Architektur verwendet. Die Ordnerstruktur si
 
 #### Datenspeicherung
 - **Firebase**: Für die Authentifizierung und Speicherung von Benutzerinformationen.
+- **Firebase**: Speichert die To-Do-Listen der Benutzer und ermöglicht es, diese Listen in Echtzeit untereinander zu teilen.
 
 #### Api Calls 
 - **[TheMealDB](https://www.themealdb.com/api.php)** :  Zum Abrufen von Rezepten und zum Anzeigen der Zubereitung auf YouTube.
