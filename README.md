@@ -121,19 +121,21 @@ In meinem Projekt habe ich die MVVM-Architektur verwendet. Die Ordnerstruktur si
 
 #### Api Calls 
 - **[TheMealDB](https://www.themealdb.com/api.php)** :  Zum Abrufen von Rezepten und zum Anzeigen der Zubereitung auf YouTube.
-- **[OpenAi-Api](https://platform.openai.com/docs/api-reference/introduction)** : Zum Erstellen eines Rezepte-Generators.
+- **[OpenAi-Api](https://platform.openai.com/docs/api-reference/introduction)** : Wird verwendet, um einen Rezepte-Generator zu erstellen.
 
 #### 3rd-Party Frameworks
 - **Firebase Authentication**: Für Benutzeranmeldung und registrierung.
-- **Firebase Cloud Firestore**: Für die Speicherung und Verwaltung der Rezepte und Benutzerinformationen. 
+- **Firebase Firestore Database**: Wird verwendet, um To-Do-Listen der Rezepte und Benutzerinformationen zu speichern und zu verwalten.
 
 
 ## Ausblick
 
 In Zukunft werde ich noch einige Ergänzungen vornehmen, um mein Projekt weiterzuentwickeln. Aktuell habe ich folgende Pläne:
 
-Eine Liste, die die nächstgelegenen Märkte mit Namen und Adresse anzeigt, um die Zutaten der Rezepte zu beschaffen.
-Eine Liste, die die Entfernung dieser Märkte von Ihrem Standort anzeigt.
-Eine Funktion, die automatisch Apple Maps startet, um direkt zur ausgewählten Adresse zu navigieren.
-
+Ich möchte eine API integrieren, die ich selbst erstellt habe und die Tausende von Rezepten auflistet. 
+Diese API wird ständig aktualisiert und neue Rezepte werden hinzugefügt. 
+Außerdem möchte ich eine Liste der nächstgelegenen Supermärkte in Deutschland erstellen, basierend auf dem Standort der Nutzer. 
+Wenn die Nutzer auf diese Supermärkte in der Liste klicken, können sie den Weg zum ausgewählten Supermarkt über Apple Maps finden. 
+Darüber hinaus möchte ich eine Ansicht hinzufügen, die täglich, wenn die App geöffnet wird, 10 zufällig ausgewählte Rezepte des Tages anzeigt. 
+Diese Funktion wird den Nutzern die Auswahl eines Rezepts erleichtern.
 
