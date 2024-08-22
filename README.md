@@ -130,7 +130,7 @@ In meinem Projekt habe ich die MVVM-Architektur verwendet. Die Ordnerstruktur si
 
 ## Ausblick
 
-In Zukunft werde ich noch einige Ergänzungen vornehmen, um mein Projekt weiterzuentwickeln. Aktuell habe ich folgende Pläne:
+**In Zukunft werde ich noch einige Ergänzungen vornehmen, um mein Projekt weiterzuentwickeln. Aktuell habe ich folgende Pläne**:
 
 Ich möchte eine API integrieren, die ich selbst erstellt habe und die Tausende von Rezepten auflistet. 
 Diese API wird ständig aktualisiert und neue Rezepte werden hinzugefügt. 
